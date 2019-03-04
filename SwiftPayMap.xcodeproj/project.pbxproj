@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		930591F3222D01C10005162D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930591F2222D01C10005162D /* AppDelegate.swift */; };
-		930591F5222D01C10005162D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930591F4222D01C10005162D /* ViewController.swift */; };
 		930591F8222D01C10005162D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 930591F6222D01C10005162D /* Main.storyboard */; };
 		930591FA222D01C30005162D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930591F9222D01C30005162D /* Assets.xcassets */; };
 		930591FD222D01C30005162D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 930591FB222D01C30005162D /* LaunchScreen.storyboard */; };
+		93059206222D02370005162D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93059205222D02370005162D /* BaseViewController.swift */; };
+		93059208222D027E0005162D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93059207222D027E0005162D /* HomeViewController.swift */; };
+		9305920B222D05E80005162D /* DaumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305920A222D05E80005162D /* DaumViewController.swift */; };
+		F7BFCA8001D9A22F1F8D0437 /* Pods_SwiftPayMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7AA2E900C4A200F043EFDF0 /* Pods_SwiftPayMap.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		930591EF222D01C10005162D /* SwiftPayMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPayMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		930591F2222D01C10005162D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		930591F4222D01C10005162D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		930591F7222D01C10005162D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		930591F9222D01C30005162D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		930591FC222D01C30005162D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		930591FE222D01C30005162D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93059205222D02370005162D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		93059207222D027E0005162D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9305920A222D05E80005162D /* DaumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaumViewController.swift; sourceTree = "<group>"; };
+		A22119C7DC3D011C7DDC51E6 /* Pods-SwiftPayMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPayMap.release.xcconfig"; path = "Target Support Files/Pods-SwiftPayMap/Pods-SwiftPayMap.release.xcconfig"; sourceTree = "<group>"; };
+		C7AA2E900C4A200F043EFDF0 /* Pods_SwiftPayMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftPayMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1E022A065FA5D5832C4FA45 /* Pods-SwiftPayMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPayMap.debug.xcconfig"; path = "Target Support Files/Pods-SwiftPayMap/Pods-SwiftPayMap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7BFCA8001D9A22F1F8D0437 /* Pods_SwiftPayMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,8 @@
 			children = (
 				930591F1222D01C10005162D /* SwiftPayMap */,
 				930591F0222D01C10005162D /* Products */,
+				E58E5322D9AF241D695D95FB /* Pods */,
+				A3EB3F74A02BADA958DCC941 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +65,49 @@
 		930591F1222D01C10005162D /* SwiftPayMap */ = {
 			isa = PBXGroup;
 			children = (
+				93059204222D022F0005162D /* main */,
 				930591F2222D01C10005162D /* AppDelegate.swift */,
-				930591F4222D01C10005162D /* ViewController.swift */,
 				930591F6222D01C10005162D /* Main.storyboard */,
 				930591F9222D01C30005162D /* Assets.xcassets */,
 				930591FB222D01C30005162D /* LaunchScreen.storyboard */,
 				930591FE222D01C30005162D /* Info.plist */,
 			);
 			path = SwiftPayMap;
+			sourceTree = "<group>";
+		};
+		93059204222D022F0005162D /* main */ = {
+			isa = PBXGroup;
+			children = (
+				93059209222D05D80005162D /* daum */,
+				93059205222D02370005162D /* BaseViewController.swift */,
+				93059207222D027E0005162D /* HomeViewController.swift */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		93059209222D05D80005162D /* daum */ = {
+			isa = PBXGroup;
+			children = (
+				9305920A222D05E80005162D /* DaumViewController.swift */,
+			);
+			path = daum;
+			sourceTree = "<group>";
+		};
+		A3EB3F74A02BADA958DCC941 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7AA2E900C4A200F043EFDF0 /* Pods_SwiftPayMap.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E58E5322D9AF241D695D95FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1E022A065FA5D5832C4FA45 /* Pods-SwiftPayMap.debug.xcconfig */,
+				A22119C7DC3D011C7DDC51E6 /* Pods-SwiftPayMap.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +117,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93059201222D01C30005162D /* Build configuration list for PBXNativeTarget "SwiftPayMap" */;
 			buildPhases = (
+				75D2FD069BBC8D862095EC4C /* [CP] Check Pods Manifest.lock */,
 				930591EB222D01C10005162D /* Sources */,
 				930591EC222D01C10005162D /* Frameworks */,
 				930591ED222D01C10005162D /* Resources */,
+				3266736735F65F3480BDF109 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +178,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3266736735F65F3480BDF109 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftPayMap/Pods-SwiftPayMap-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftPayMap/Pods-SwiftPayMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75D2FD069BBC8D862095EC4C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftPayMap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		930591EB222D01C10005162D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				930591F5222D01C10005162D /* ViewController.swift in Sources */,
 				930591F3222D01C10005162D /* AppDelegate.swift in Sources */,
+				9305920B222D05E80005162D /* DaumViewController.swift in Sources */,
+				93059206222D02370005162D /* BaseViewController.swift in Sources */,
+				93059208222D027E0005162D /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,11 +379,13 @@
 		};
 		93059202222D01C30005162D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1E022A065FA5D5832C4FA45 /* Pods-SwiftPayMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D9BK789354;
 				INFOPLIST_FILE = SwiftPayMap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +399,13 @@
 		};
 		93059203222D01C30005162D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A22119C7DC3D011C7DDC51E6 /* Pods-SwiftPayMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D9BK789354;
 				INFOPLIST_FILE = SwiftPayMap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
