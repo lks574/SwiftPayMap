@@ -14,7 +14,7 @@ import CoreLocation
 
 class DaumViewController: BaseViewController {
 
-    private let mapView: MTMapView = MTMapView(frame: .zero)
+    private let mapView: MTMapView = MTMapView()
     
     
 //    private var locationManager: CLLocationManager!
@@ -35,48 +35,28 @@ class DaumViewController: BaseViewController {
         
         uiSetting()
         etcSetting()
-    
-    }
-    
-    private func mapMaker(geo: MTMapPointGeo, tag: Int){
-        let currentPostionItem = MTMapPOIItem()
-        currentPostionItem.itemName = "Current Postion"
-        currentPostionItem.mapPoint = MTMapPoint(geoCoord: geo)
-        currentPostionItem.markerType = MTMapPOIItemMarkerType.bluePin
-        currentPostionItem.showAnimationType = .noAnimation
-        currentPostionItem.draggable = true
-        currentPostionItem.tag = tag
         
-        mapView.addPOIItems([currentPostionItem])
+        let marker = MTMapPOIItem()
+        marker.itemName = "Sample"
+        marker.tag = 10
+        marker.mapPoint = MTMapPoint(geoCoord: .init(latitude: 37.4981688, longitude: 127.0484572))
+        marker.markerType = .bluePin
+        marker.showAnimationType = .noAnimation
+        
+        let marker2 = MTMapPOIItem()
+        marker2.itemName = "Sample2"
+        marker2.tag = 10
+        marker2.mapPoint = MTMapPoint(geoCoord: .init(latitude: 37.5, longitude: 127.1))
+        marker2.markerType = .redPin
+        marker2.showAnimationType = .noAnimation
+        
+        mapView.addPOIItems([marker, marker2])
         mapView.fitAreaToShowAllPOIItems()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+//        sampleMarker()
+        
 //        mapView.currentLocationTrackingMode = .onWithoutHeading
-        
-        var items = [MTMapPOIItem]()
-        items.append(poiItem(name: "하나", latitude: 37.4981688, longitude: 127.0484572))
-        items.append(poiItem(name: "둘", latitude: 37.4987963, longitude: 127.0415946))
-        items.append(poiItem(name: "셋", latitude: 37.5025612, longitude: 127.0415946))
-        items.append(poiItem(name: "넷", latitude: 37.5037539, longitude: 127.0426469))
-        //위 부분은 viewDidLoad()에서 수행해도 괜찮습니다
-        
-        mapView.addPOIItems(items)
-        mapView.fitAreaToShowAllPOIItems()  // 모든 마커가 보이게 카메라 위치/줌 조정
     }
     
-    func poiItem(name: String, latitude: Double, longitude: Double) -> MTMapPOIItem {
-        let item = MTMapPOIItem()
-        item.itemName = name
-        item.markerType = .redPin
-        item.markerSelectedType = .redPin
-        item.mapPoint = MTMapPoint(geoCoord: .init(latitude: latitude, longitude: longitude))
-        item.showAnimationType = .noAnimation
-        item.customImageAnchorPointOffset = .init(offsetX: 30, offsetY: 0)    // 마커 위치 조정
-        
-        return item
-    }
     
     
     private func etcSetting(){
@@ -111,6 +91,15 @@ extension DaumViewController: MTMapViewDelegate {
     
     func mapView(_ mapView: MTMapView!, updateDeviceHeading headingAngle: MTMapRotationAngle) {
         print("MTMapView updateDeviceHeading \(headingAngle) degress")
+    }
+    
+    
+    func mapView(_ mapView: MTMapView!, selectedPOIItem poiItem: MTMapPOIItem!) -> Bool {
+        return true
+    }
+    
+    func mapView(_ mapView: MTMapView!, doubleTapOn mapPoint: MTMapPoint!) {
+        
     }
     
 }
