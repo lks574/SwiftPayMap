@@ -24,6 +24,7 @@ class HomeViewController: BaseViewController {
         self.title = "샘플"
         uiSetting()
         etcSetting()
+        
     }
     
     private func etcSetting(){
@@ -68,6 +69,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             break
         case 1:
+            let vc = PGViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
             break
         case 2:
             let vc = DaumViewController()

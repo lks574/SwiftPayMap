@@ -14,8 +14,32 @@
 		93059206222D02370005162D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93059205222D02370005162D /* BaseViewController.swift */; };
 		93059208222D027E0005162D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93059207222D027E0005162D /* HomeViewController.swift */; };
 		9305920B222D05E80005162D /* DaumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305920A222D05E80005162D /* DaumViewController.swift */; };
+		9305920D222D08010005162D /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9305920C222D08010005162D /* DaumMap.framework */; };
+		9305920E222D08010005162D /* DaumMap.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9305920C222D08010005162D /* DaumMap.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		93059211222D089A0005162D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 93059210222D089A0005162D /* libc++.tbd */; };
+		93059213222D08A40005162D /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 93059212222D08A40005162D /* libxml2.tbd */; };
+		93059215222D08AE0005162D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 93059214222D08AE0005162D /* libsqlite3.tbd */; };
+		93059217222D08B80005162D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93059216222D08B80005162D /* QuartzCore.framework */; };
+		93059219222D08C00005162D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93059218222D08C00005162D /* CoreLocation.framework */; };
+		9305921B222D08C90005162D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9305921A222D08C90005162D /* SystemConfiguration.framework */; };
+		9305921D222D08D10005162D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9305921C222D08D10005162D /* OpenGLES.framework */; };
+		93059221222D0C0B0005162D /* PGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93059220222D0C0B0005162D /* PGViewController.swift */; };
 		F7BFCA8001D9A22F1F8D0437 /* Pods_SwiftPayMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7AA2E900C4A200F043EFDF0 /* Pods_SwiftPayMap.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9305920F222D08010005162D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9305920E222D08010005162D /* DaumMap.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		930591EF222D01C10005162D /* SwiftPayMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPayMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,6 +51,16 @@
 		93059205222D02370005162D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		93059207222D027E0005162D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9305920A222D05E80005162D /* DaumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaumViewController.swift; sourceTree = "<group>"; };
+		9305920C222D08010005162D /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumMap.framework; sourceTree = "<group>"; };
+		93059210222D089A0005162D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		93059212222D08A40005162D /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		93059214222D08AE0005162D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		93059216222D08B80005162D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		93059218222D08C00005162D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9305921A222D08C90005162D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9305921C222D08D10005162D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		9305921E222D094C0005162D /* Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging_Header.h; sourceTree = "<group>"; };
+		93059220222D0C0B0005162D /* PGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGViewController.swift; sourceTree = "<group>"; };
 		A22119C7DC3D011C7DDC51E6 /* Pods-SwiftPayMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPayMap.release.xcconfig"; path = "Target Support Files/Pods-SwiftPayMap/Pods-SwiftPayMap.release.xcconfig"; sourceTree = "<group>"; };
 		C7AA2E900C4A200F043EFDF0 /* Pods_SwiftPayMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftPayMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E022A065FA5D5832C4FA45 /* Pods-SwiftPayMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPayMap.debug.xcconfig"; path = "Target Support Files/Pods-SwiftPayMap/Pods-SwiftPayMap.debug.xcconfig"; sourceTree = "<group>"; };
@@ -37,6 +71,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9305921D222D08D10005162D /* OpenGLES.framework in Frameworks */,
+				9305921B222D08C90005162D /* SystemConfiguration.framework in Frameworks */,
+				93059219222D08C00005162D /* CoreLocation.framework in Frameworks */,
+				93059217222D08B80005162D /* QuartzCore.framework in Frameworks */,
+				93059215222D08AE0005162D /* libsqlite3.tbd in Frameworks */,
+				93059213222D08A40005162D /* libxml2.tbd in Frameworks */,
+				93059211222D089A0005162D /* libc++.tbd in Frameworks */,
+				9305920D222D08010005162D /* DaumMap.framework in Frameworks */,
 				F7BFCA8001D9A22F1F8D0437 /* Pods_SwiftPayMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +89,7 @@
 		930591E6222D01C10005162D = {
 			isa = PBXGroup;
 			children = (
+				9305920C222D08010005162D /* DaumMap.framework */,
 				930591F1222D01C10005162D /* SwiftPayMap */,
 				930591F0222D01C10005162D /* Products */,
 				E58E5322D9AF241D695D95FB /* Pods */,
@@ -71,6 +114,7 @@
 				930591F9222D01C30005162D /* Assets.xcassets */,
 				930591FB222D01C30005162D /* LaunchScreen.storyboard */,
 				930591FE222D01C30005162D /* Info.plist */,
+				9305921E222D094C0005162D /* Bridging_Header.h */,
 			);
 			path = SwiftPayMap;
 			sourceTree = "<group>";
@@ -78,6 +122,7 @@
 		93059204222D022F0005162D /* main */ = {
 			isa = PBXGroup;
 			children = (
+				9305921F222D0C020005162D /* pg */,
 				93059209222D05D80005162D /* daum */,
 				93059205222D02370005162D /* BaseViewController.swift */,
 				93059207222D027E0005162D /* HomeViewController.swift */,
@@ -93,9 +138,24 @@
 			path = daum;
 			sourceTree = "<group>";
 		};
+		9305921F222D0C020005162D /* pg */ = {
+			isa = PBXGroup;
+			children = (
+				93059220222D0C0B0005162D /* PGViewController.swift */,
+			);
+			path = pg;
+			sourceTree = "<group>";
+		};
 		A3EB3F74A02BADA958DCC941 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9305921C222D08D10005162D /* OpenGLES.framework */,
+				9305921A222D08C90005162D /* SystemConfiguration.framework */,
+				93059218222D08C00005162D /* CoreLocation.framework */,
+				93059216222D08B80005162D /* QuartzCore.framework */,
+				93059214222D08AE0005162D /* libsqlite3.tbd */,
+				93059212222D08A40005162D /* libxml2.tbd */,
+				93059210222D089A0005162D /* libc++.tbd */,
 				C7AA2E900C4A200F043EFDF0 /* Pods_SwiftPayMap.framework */,
 			);
 			name = Frameworks;
@@ -122,6 +182,7 @@
 				930591EC222D01C10005162D /* Frameworks */,
 				930591ED222D01C10005162D /* Resources */,
 				3266736735F65F3480BDF109 /* [CP] Embed Pods Frameworks */,
+				9305920F222D08010005162D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93059221222D0C0B0005162D /* PGViewController.swift in Sources */,
 				930591F3222D01C10005162D /* AppDelegate.swift in Sources */,
 				9305920B222D05E80005162D /* DaumViewController.swift in Sources */,
 				93059206222D02370005162D /* BaseViewController.swift in Sources */,
@@ -382,8 +444,13 @@
 			baseConfigurationReference = E1E022A065FA5D5832C4FA45 /* Pods-SwiftPayMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D9BK789354;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SwiftPayMap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -392,6 +459,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ysnzp.SwiftPayMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/kyungseoklee/Documents/dev/git/SwiftPayMap/SwiftPayMap/Bridging_Header.h;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -402,8 +470,13 @@
 			baseConfigurationReference = A22119C7DC3D011C7DDC51E6 /* Pods-SwiftPayMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D9BK789354;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SwiftPayMap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -412,6 +485,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ysnzp.SwiftPayMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/kyungseoklee/Documents/dev/git/SwiftPayMap/SwiftPayMap/Bridging_Header.h;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

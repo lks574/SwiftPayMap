@@ -47,5 +47,9 @@
     <!--  다음, 카카오 -->
     <key>KAKAO_APP_KEY</key>
     <string>f10b91b1909e590781e0b9769764e2fc</string>
+    
+    
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>앱을 사용하는 동안 위치를 추적합니다.</string>
 </dict>
 </plist>
