@@ -33,12 +33,19 @@ PODS:
   - KakaoOpenSDK/KakaoOpenSDK (1.11.1)
   - KakaoOpenSDK/KakaoS2 (1.11.1):
     - KakaoOpenSDK/KakaoCommon
+  - RxAtomic (4.4.1)
+  - RxCocoa (4.4.1):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.4.1):
+    - RxAtomic (~> 4.4)
   - SnapKit (4.2.0)
   - Then (2.4.0)
 
 DEPENDENCIES:
   - FacebookLogin
   - KakaoOpenSDK (~> 1.11)
+  - RxCocoa
+  - RxSwift
   - SnapKit
   - Then
 
@@ -50,6 +57,9 @@ SPEC REPOS:
     - FBSDKCoreKit
     - FBSDKLoginKit
     - KakaoOpenSDK
+    - RxAtomic
+    - RxCocoa
+    - RxSwift
     - SnapKit
     - Then
 
@@ -60,9 +70,12 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: ae214474b25033399c131dc81d258e412582a2ba
   FBSDKLoginKit: 7a1e411d46acc8834588eca437daf34de42e1d52
   KakaoOpenSDK: eb8eae72c3943fa51ac1420e7a1268730ee99d61
+  RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
+  RxCocoa: 2f35a76bf8887872e28a1914112395b11b8e0e64
+  RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
 
-PODFILE CHECKSUM: 60ea5d01dcd06f831b48ce1564d42aa9cef9465d
+PODFILE CHECKSUM: 37c1a3c17565dbf62e469bc46685cd671fbc5328
 
 COCOAPODS: 1.6.0

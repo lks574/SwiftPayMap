@@ -16,7 +16,7 @@ class HomeViewController: BaseViewController {
         $0.tableFooterView = UIView(frame: .zero)
     }
     
-    private let tableArray = ["iap","pg","daum map", "카카오 로그인"]
+    private let tableArray = ["iap","pg","daum map", "카카오 로그인", "RX"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +78,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             break
         case 3:
             let vc = KakaoViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        case 4:
+            let vc = RxSwiftViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         default:
             break

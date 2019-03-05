@@ -9,6 +9,7 @@ target 'SwiftPayMap' do
   pod 'Then'
   pod 'KakaoOpenSDK', '~> 1.11'
   pod 'FacebookLogin'
-  # Pods for SwiftPayMap
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
 end

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 import KakaoOpenSDK
 
 @UIApplicationMain
@@ -24,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navi
         window?.makeKeyAndVisible()
         
+        FBSDKApplicationDelegate.sharedInstance()?.application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
     
@@ -32,7 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if KOSession.isKakaoAgeAuthCallback(url){
             return KOSession.handleOpen(url)
         }
-        return false
+        return FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: (options[UIApplication.OpenURLOptionsKey.sourceApplication] as! String), annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+    
     }
     
 
