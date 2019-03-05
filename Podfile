@@ -7,6 +7,8 @@ target 'SwiftPayMap' do
   
   pod 'SnapKit'
   pod 'Then'
+  pod 'KakaoOpenSDK', '~> 1.11'
+  pod 'FacebookLogin'
   # Pods for SwiftPayMap
 
 end

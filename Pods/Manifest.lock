@@ -1,20 +1,68 @@
 PODS:
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
+  - FacebookCore (0.5.0):
+    - Bolts (~> 1.9)
+    - FBSDKCoreKit (~> 4.37)
+  - FacebookLogin (0.5.0):
+    - Bolts (~> 1.9)
+    - FacebookCore (~> 0.5)
+    - FBSDKCoreKit (~> 4.37)
+    - FBSDKLoginKit (~> 4.37)
+  - FBSDKCoreKit (4.40.0):
+    - Bolts (~> 1.9)
+  - FBSDKLoginKit (4.40.0):
+    - FBSDKCoreKit
+  - KakaoOpenSDK (1.11.1):
+    - KakaoOpenSDK/KakaoCommon (= 1.11.1)
+    - KakaoOpenSDK/KakaoLink (= 1.11.1)
+    - KakaoOpenSDK/KakaoMessageTemplate (= 1.11.1)
+    - KakaoOpenSDK/KakaoNavi (= 1.11.1)
+    - KakaoOpenSDK/KakaoOpenSDK (= 1.11.1)
+    - KakaoOpenSDK/KakaoS2 (= 1.11.1)
+  - KakaoOpenSDK/KakaoCommon (1.11.1)
+  - KakaoOpenSDK/KakaoLink (1.11.1):
+    - KakaoOpenSDK/KakaoCommon
+  - KakaoOpenSDK/KakaoMessageTemplate (1.11.1)
+  - KakaoOpenSDK/KakaoNavi (1.11.1):
+    - KakaoOpenSDK/KakaoCommon
+  - KakaoOpenSDK/KakaoOpenSDK (1.11.1)
+  - KakaoOpenSDK/KakaoS2 (1.11.1):
+    - KakaoOpenSDK/KakaoCommon
   - SnapKit (4.2.0)
   - Then (2.4.0)
 
 DEPENDENCIES:
+  - FacebookLogin
+  - KakaoOpenSDK (~> 1.11)
   - SnapKit
   - Then
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Bolts
+    - FacebookCore
+    - FacebookLogin
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - KakaoOpenSDK
     - SnapKit
     - Then
 
 SPEC CHECKSUMS:
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  FacebookCore: 74288d0add931d361b1596beae787ab72c438249
+  FacebookLogin: ebcf34714a1cb9f0759d9f071cfb01ed500996cf
+  FBSDKCoreKit: ae214474b25033399c131dc81d258e412582a2ba
+  FBSDKLoginKit: 7a1e411d46acc8834588eca437daf34de42e1d52
+  KakaoOpenSDK: eb8eae72c3943fa51ac1420e7a1268730ee99d61
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
 
-PODFILE CHECKSUM: 85674f807499f9fb4d083e366d915b6fc77f4455
+PODFILE CHECKSUM: 60ea5d01dcd06f831b48ce1564d42aa9cef9465d
 
 COCOAPODS: 1.6.0

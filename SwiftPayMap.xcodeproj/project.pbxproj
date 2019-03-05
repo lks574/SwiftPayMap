@@ -14,8 +14,6 @@
 		93059206222D02370005162D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93059205222D02370005162D /* BaseViewController.swift */; };
 		93059208222D027E0005162D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93059207222D027E0005162D /* HomeViewController.swift */; };
 		9305920B222D05E80005162D /* DaumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305920A222D05E80005162D /* DaumViewController.swift */; };
-		9305920D222D08010005162D /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9305920C222D08010005162D /* DaumMap.framework */; };
-		9305920E222D08010005162D /* DaumMap.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9305920C222D08010005162D /* DaumMap.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		93059211222D089A0005162D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 93059210222D089A0005162D /* libc++.tbd */; };
 		93059213222D08A40005162D /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 93059212222D08A40005162D /* libxml2.tbd */; };
 		93059215222D08AE0005162D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 93059214222D08AE0005162D /* libsqlite3.tbd */; };
@@ -25,18 +23,21 @@
 		9305921D222D08D10005162D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9305921C222D08D10005162D /* OpenGLES.framework */; };
 		93059221222D0C0B0005162D /* PGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93059220222D0C0B0005162D /* PGViewController.swift */; };
 		935F12DE222D37B300D3D4B1 /* Bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F12DD222D37B300D3D4B1 /* Bridge.m */; };
-		935F12E0222D3FA100D3D4B1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 935F12DF222D3FA100D3D4B1 /* Default-568h@2x.png */; };
+		93AEE813222DFA3E00D98DC9 /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93AEE812222DFA3E00D98DC9 /* DaumMap.framework */; };
+		93AEE814222DFA3E00D98DC9 /* DaumMap.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 93AEE812222DFA3E00D98DC9 /* DaumMap.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		93AEE818222DFA9C00D98DC9 /* custom_poi_marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AEE817222DFA9C00D98DC9 /* custom_poi_marker.png */; };
+		93AEE81B222DFC0B00D98DC9 /* KakaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AEE81A222DFC0B00D98DC9 /* KakaoViewController.swift */; };
 		F7BFCA8001D9A22F1F8D0437 /* Pods_SwiftPayMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7AA2E900C4A200F043EFDF0 /* Pods_SwiftPayMap.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9305920F222D08010005162D /* Embed Frameworks */ = {
+		93AEE815222DFA3E00D98DC9 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9305920E222D08010005162D /* DaumMap.framework in Embed Frameworks */,
+				93AEE814222DFA3E00D98DC9 /* DaumMap.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,7 +54,6 @@
 		93059205222D02370005162D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		93059207222D027E0005162D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9305920A222D05E80005162D /* DaumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaumViewController.swift; sourceTree = "<group>"; };
-		9305920C222D08010005162D /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumMap.framework; sourceTree = "<group>"; };
 		93059210222D089A0005162D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		93059212222D08A40005162D /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		93059214222D08AE0005162D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -64,7 +64,9 @@
 		93059220222D0C0B0005162D /* PGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGViewController.swift; sourceTree = "<group>"; };
 		935F12DC222D37B200D3D4B1 /* SwiftPayMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftPayMap-Bridging-Header.h"; sourceTree = "<group>"; };
 		935F12DD222D37B300D3D4B1 /* Bridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bridge.m; sourceTree = "<group>"; };
-		935F12DF222D3FA100D3D4B1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		93AEE812222DFA3E00D98DC9 /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumMap.framework; sourceTree = "<group>"; };
+		93AEE817222DFA9C00D98DC9 /* custom_poi_marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custom_poi_marker.png; sourceTree = "<group>"; };
+		93AEE81A222DFC0B00D98DC9 /* KakaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoViewController.swift; sourceTree = "<group>"; };
 		A22119C7DC3D011C7DDC51E6 /* Pods-SwiftPayMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPayMap.release.xcconfig"; path = "Target Support Files/Pods-SwiftPayMap/Pods-SwiftPayMap.release.xcconfig"; sourceTree = "<group>"; };
 		C7AA2E900C4A200F043EFDF0 /* Pods_SwiftPayMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftPayMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E022A065FA5D5832C4FA45 /* Pods-SwiftPayMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPayMap.debug.xcconfig"; path = "Target Support Files/Pods-SwiftPayMap/Pods-SwiftPayMap.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,7 +84,7 @@
 				93059215222D08AE0005162D /* libsqlite3.tbd in Frameworks */,
 				93059213222D08A40005162D /* libxml2.tbd in Frameworks */,
 				93059211222D089A0005162D /* libc++.tbd in Frameworks */,
-				9305920D222D08010005162D /* DaumMap.framework in Frameworks */,
+				93AEE813222DFA3E00D98DC9 /* DaumMap.framework in Frameworks */,
 				F7BFCA8001D9A22F1F8D0437 /* Pods_SwiftPayMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,8 +95,7 @@
 		930591E6222D01C10005162D = {
 			isa = PBXGroup;
 			children = (
-				935F12DF222D3FA100D3D4B1 /* Default-568h@2x.png */,
-				9305920C222D08010005162D /* DaumMap.framework */,
+				93AEE812222DFA3E00D98DC9 /* DaumMap.framework */,
 				930591F1222D01C10005162D /* SwiftPayMap */,
 				930591F0222D01C10005162D /* Products */,
 				E58E5322D9AF241D695D95FB /* Pods */,
@@ -113,6 +114,7 @@
 		930591F1222D01C10005162D /* SwiftPayMap */ = {
 			isa = PBXGroup;
 			children = (
+				93AEE816222DFA7E00D98DC9 /* resources */,
 				93059204222D022F0005162D /* main */,
 				930591F2222D01C10005162D /* AppDelegate.swift */,
 				930591F6222D01C10005162D /* Main.storyboard */,
@@ -128,6 +130,7 @@
 		93059204222D022F0005162D /* main */ = {
 			isa = PBXGroup;
 			children = (
+				93AEE819222DFBFD00D98DC9 /* kakao_facebook */,
 				9305921F222D0C020005162D /* pg */,
 				93059209222D05D80005162D /* daum */,
 				93059205222D02370005162D /* BaseViewController.swift */,
@@ -150,6 +153,22 @@
 				93059220222D0C0B0005162D /* PGViewController.swift */,
 			);
 			path = pg;
+			sourceTree = "<group>";
+		};
+		93AEE816222DFA7E00D98DC9 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				93AEE817222DFA9C00D98DC9 /* custom_poi_marker.png */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		93AEE819222DFBFD00D98DC9 /* kakao_facebook */ = {
+			isa = PBXGroup;
+			children = (
+				93AEE81A222DFC0B00D98DC9 /* KakaoViewController.swift */,
+			);
+			path = kakao_facebook;
 			sourceTree = "<group>";
 		};
 		A3EB3F74A02BADA958DCC941 /* Frameworks */ = {
@@ -188,7 +207,7 @@
 				930591EC222D01C10005162D /* Frameworks */,
 				930591ED222D01C10005162D /* Resources */,
 				3266736735F65F3480BDF109 /* [CP] Embed Pods Frameworks */,
-				9305920F222D08010005162D /* Embed Frameworks */,
+				93AEE815222DFA3E00D98DC9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,9 +258,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				930591FD222D01C30005162D /* LaunchScreen.storyboard in Resources */,
-				935F12E0222D3FA100D3D4B1 /* Default-568h@2x.png in Resources */,
 				930591FA222D01C30005162D /* Assets.xcassets in Resources */,
 				930591F8222D01C10005162D /* Main.storyboard in Resources */,
+				93AEE818222DFA9C00D98DC9 /* custom_poi_marker.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +276,11 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SwiftPayMap/Pods-SwiftPayMap-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 			);
@@ -264,6 +288,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 			);
@@ -301,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93AEE81B222DFC0B00D98DC9 /* KakaoViewController.swift in Sources */,
 				93059221222D0C0B0005162D /* PGViewController.swift in Sources */,
 				930591F3222D01C10005162D /* AppDelegate.swift in Sources */,
 				9305920B222D05E80005162D /* DaumViewController.swift in Sources */,

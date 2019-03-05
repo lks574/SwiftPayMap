@@ -16,7 +16,7 @@ class HomeViewController: BaseViewController {
         $0.tableFooterView = UIView(frame: .zero)
     }
     
-    private let tableArray = ["iap","pg","daum map"]
+    private let tableArray = ["iap","pg","daum map", "카카오 로그인"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +76,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             let vc = DaumViewController()
             self.navigationController?.pushViewController(vc, animated: true)
             break
+        case 3:
+            let vc = KakaoViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
         default:
             break
         }

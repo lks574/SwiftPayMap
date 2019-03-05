@@ -16,43 +16,39 @@ class DaumViewController: BaseViewController {
 
     private let mapView: MTMapView = MTMapView()
     
-    
-//    private var locationManager: CLLocationManager!
-//    private var currentLocation: CLLocation?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "다음 지도"
         
-//        locationManager = CLLocationManager()
-//        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//
-//        if CLLocationManager.locationServicesEnabled() {
-//            locationManager.requestWhenInUseAuthorization()
-//            locationManager.startUpdatingLocation()
-//        }
         
         uiSetting()
         etcSetting()
         
         let marker = MTMapPOIItem()
-        marker.itemName = "Sample"
-        marker.tag = 10
+        marker.itemName = "sample"
+        marker.markerType = .customImage
+        marker.customImageName = "custom_poi_marker.png"
         marker.mapPoint = MTMapPoint(geoCoord: .init(latitude: 37.4981688, longitude: 127.0484572))
-        marker.markerType = .bluePin
         marker.showAnimationType = .noAnimation
         
         let marker2 = MTMapPOIItem()
-        marker2.itemName = "Sample2"
-        marker2.tag = 10
+        marker2.itemName = "sample2"
+        marker2.markerType = .customImage
+        marker2.customImageName = "custom_poi_marker.png"
         marker2.mapPoint = MTMapPoint(geoCoord: .init(latitude: 37.5, longitude: 127.1))
-        marker2.markerType = .redPin
         marker2.showAnimationType = .noAnimation
         
-        mapView.addPOIItems([marker, marker2])
+        let marker3 = MTMapPOIItem()
+        marker3.itemName = "다음"
+        marker3.markerType = .customImage
+        marker3.customImageName = "custom_poi_marker.png"
+        marker3.mapPoint = MTMapPoint(geoCoord: .init(latitude: 37.55, longitude: 127.15))
+        marker3.showAnimationType = .springFromGround
+        
+        mapView.addPOIItems([marker, marker2, marker3])
         mapView.fitAreaToShowAllPOIItems()
-//        sampleMarker()
         
 //        mapView.currentLocationTrackingMode = .onWithoutHeading
     }
