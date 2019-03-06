@@ -11,7 +11,6 @@
 		930591F8222D01C10005162D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 930591F6222D01C10005162D /* Main.storyboard */; };
 		930591FA222D01C30005162D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930591F9222D01C30005162D /* Assets.xcassets */; };
 		930591FD222D01C30005162D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 930591FB222D01C30005162D /* LaunchScreen.storyboard */; };
-		93059206222D02370005162D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93059205222D02370005162D /* BaseViewController.swift */; };
 		93059208222D027E0005162D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93059207222D027E0005162D /* HomeViewController.swift */; };
 		9305920B222D05E80005162D /* DaumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305920A222D05E80005162D /* DaumViewController.swift */; };
 		93059211222D089A0005162D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 93059210222D089A0005162D /* libc++.tbd */; };
@@ -22,6 +21,9 @@
 		9305921B222D08C90005162D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9305921A222D08C90005162D /* SystemConfiguration.framework */; };
 		9305921D222D08D10005162D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9305921C222D08D10005162D /* OpenGLES.framework */; };
 		93059221222D0C0B0005162D /* PGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93059220222D0C0B0005162D /* PGViewController.swift */; };
+		9352FE2D222F5B5A001AD9F8 /* ReactorKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FE2C222F5B5A001AD9F8 /* ReactorKitViewController.swift */; };
+		9352FE31222F5B7A001AD9F8 /* ReactorKitReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FE30222F5B7A001AD9F8 /* ReactorKitReactor.swift */; };
+		9352FE34222F68E6001AD9F8 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FE33222F68E6001AD9F8 /* UIView+Extension.swift */; };
 		935F12DE222D37B300D3D4B1 /* Bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F12DD222D37B300D3D4B1 /* Bridge.m */; };
 		93AEE813222DFA3E00D98DC9 /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93AEE812222DFA3E00D98DC9 /* DaumMap.framework */; };
 		93AEE814222DFA3E00D98DC9 /* DaumMap.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 93AEE812222DFA3E00D98DC9 /* DaumMap.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -53,7 +55,6 @@
 		930591F9222D01C30005162D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		930591FC222D01C30005162D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		930591FE222D01C30005162D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93059205222D02370005162D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		93059207222D027E0005162D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9305920A222D05E80005162D /* DaumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaumViewController.swift; sourceTree = "<group>"; };
 		93059210222D089A0005162D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -64,6 +65,9 @@
 		9305921A222D08C90005162D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9305921C222D08D10005162D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		93059220222D0C0B0005162D /* PGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGViewController.swift; sourceTree = "<group>"; };
+		9352FE2C222F5B5A001AD9F8 /* ReactorKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorKitViewController.swift; sourceTree = "<group>"; };
+		9352FE30222F5B7A001AD9F8 /* ReactorKitReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorKitReactor.swift; sourceTree = "<group>"; };
+		9352FE33222F68E6001AD9F8 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		935F12DC222D37B200D3D4B1 /* SwiftPayMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftPayMap-Bridging-Header.h"; sourceTree = "<group>"; };
 		935F12DD222D37B300D3D4B1 /* Bridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bridge.m; sourceTree = "<group>"; };
 		93AEE812222DFA3E00D98DC9 /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumMap.framework; sourceTree = "<group>"; };
@@ -134,11 +138,12 @@
 		93059204222D022F0005162D /* main */ = {
 			isa = PBXGroup;
 			children = (
+				9352FE32222F68D4001AD9F8 /* extension */,
+				9352FE2B222F5B40001AD9F8 /* reactor */,
 				93AEE81C222E29EC00D98DC9 /* rx_swift */,
 				93AEE819222DFBFD00D98DC9 /* kakao_facebook */,
 				9305921F222D0C020005162D /* pg */,
 				93059209222D05D80005162D /* daum */,
-				93059205222D02370005162D /* BaseViewController.swift */,
 				93059207222D027E0005162D /* HomeViewController.swift */,
 			);
 			path = main;
@@ -158,6 +163,23 @@
 				93059220222D0C0B0005162D /* PGViewController.swift */,
 			);
 			path = pg;
+			sourceTree = "<group>";
+		};
+		9352FE2B222F5B40001AD9F8 /* reactor */ = {
+			isa = PBXGroup;
+			children = (
+				9352FE2C222F5B5A001AD9F8 /* ReactorKitViewController.swift */,
+				9352FE30222F5B7A001AD9F8 /* ReactorKitReactor.swift */,
+			);
+			path = reactor;
+			sourceTree = "<group>";
+		};
+		9352FE32222F68D4001AD9F8 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				9352FE33222F68E6001AD9F8 /* UIView+Extension.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 		93AEE816222DFA7E00D98DC9 /* resources */ = {
@@ -295,9 +317,12 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxViewController/RxViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 			);
@@ -310,9 +335,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 			);
@@ -350,13 +378,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9352FE2D222F5B5A001AD9F8 /* ReactorKitViewController.swift in Sources */,
 				93AEE81B222DFC0B00D98DC9 /* KakaoViewController.swift in Sources */,
 				93AEE822222E694A00D98DC9 /* ViewModel.swift in Sources */,
 				93059221222D0C0B0005162D /* PGViewController.swift in Sources */,
 				930591F3222D01C10005162D /* AppDelegate.swift in Sources */,
+				9352FE31222F5B7A001AD9F8 /* ReactorKitReactor.swift in Sources */,
+				9352FE34222F68E6001AD9F8 /* UIView+Extension.swift in Sources */,
 				9305920B222D05E80005162D /* DaumViewController.swift in Sources */,
 				93AEE820222E310A00D98DC9 /* RxSwiftViewController.swift in Sources */,
-				93059206222D02370005162D /* BaseViewController.swift in Sources */,
 				935F12DE222D37B300D3D4B1 /* Bridge.m in Sources */,
 				93059208222D027E0005162D /* HomeViewController.swift in Sources */,
 			);

@@ -14,7 +14,7 @@ import RxCocoa
 import RxSwift
 import Then
 
-class RxSwiftViewController: BaseViewController {
+class RxSwiftViewController: UIViewController {
 
     let viewModel = ViewModel()
     
@@ -173,7 +173,7 @@ class RxSwiftViewController: BaseViewController {
         }
         
         idField.snp.makeConstraints{
-            $0.top.equalTo(self.safeTop()).offset(20)
+            $0.top.equalTo(self.view.safeArea.top).offset(20)
 //            $0.height.equalTo(60)
             $0.centerX.equalTo(self.view)
             $0.width.equalTo(self.view).multipliedBy(0.7)

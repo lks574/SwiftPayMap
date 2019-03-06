@@ -14,7 +14,7 @@ import FBSDKLoginKit
 
 
 // 카카오 페이스북
-class KakaoViewController: BaseViewController {
+class KakaoViewController: UIViewController {
     
     private let kakaoLoginButton = KOLoginButton()
     private let facebookLoginButton = FBSDKLoginButton()
@@ -93,7 +93,7 @@ class KakaoViewController: BaseViewController {
         }
         
         kakaoLoginButton.snp.makeConstraints{
-            $0.top.equalTo(self.safeTop())
+            $0.top.equalTo(self.view.safeArea.top)
             $0.centerX.equalTo(self.view.snp.centerX)
             $0.height.equalTo(60)
             $0.width.equalTo(self.view.snp.width).multipliedBy(0.8)

@@ -11,4 +11,7 @@ target 'SwiftPayMap' do
   pod 'FacebookLogin'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'ReactorKit'
+  pod 'RxOptional'
+  pod 'RxViewController'
 end

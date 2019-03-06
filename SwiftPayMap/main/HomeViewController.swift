@@ -10,13 +10,13 @@ import UIKit
 import Then
 import SnapKit
 
-class HomeViewController: BaseViewController {
+class HomeViewController: UIViewController {
 
     private let mainTableView = UITableView(frame: .zero).then{
         $0.tableFooterView = UIView(frame: .zero)
     }
     
-    private let tableArray = ["iap","pg","daum map", "카카오 로그인", "RX"]
+    private let tableArray = ["iap","pg","daum map", "카카오 로그인", "RX", "ReactorKit"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +41,8 @@ class HomeViewController: BaseViewController {
         }
         
         mainTableView.snp.makeConstraints{
-            $0.top.equalTo(self.safeTop())
-            $0.bottom.equalTo(self.safeBottom())
+            $0.top.equalTo(self.view.safeArea.top)
+            $0.bottom.equalTo(self.view.safeArea.bottom)
             $0.leading.equalTo(self.view.snp.leading)
             $0.trailing.equalTo(self.view.snp.trailing)
         }
@@ -82,7 +82,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case 4:
             let vc = RxSwiftViewController()
             self.navigationController?.pushViewController(vc, animated: true)
-    
+        case 5:
+            let vc = ReactorKitViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
         default:
             break
         }

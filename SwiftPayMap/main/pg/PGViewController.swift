@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import WebKit
 
-class PGViewController: BaseViewController {
+class PGViewController: UIViewController {
 
     private let wkWebView = WKWebView()
     
@@ -38,8 +38,8 @@ class PGViewController: BaseViewController {
         }
         
         wkWebView.snp.makeConstraints{
-            $0.top.equalTo(self.safeTop())
-            $0.bottom.equalTo(self.safeBottom())
+            $0.top.equalTo(self.view.safeArea.top)
+            $0.bottom.equalTo(self.view.safeArea.bottom)
             $0.leading.equalTo(self.view.snp.leading)
             $0.trailing.equalTo(self.view.snp.trailing)
         }

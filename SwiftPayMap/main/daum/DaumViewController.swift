@@ -12,7 +12,7 @@ import UIKit
 import SnapKit
 import CoreLocation
 
-class DaumViewController: BaseViewController {
+class DaumViewController: UIViewController {
 
     private let mapView: MTMapView = MTMapView()
     
@@ -67,8 +67,8 @@ class DaumViewController: BaseViewController {
             self.view.addSubview($0)
         }
         mapView.snp.makeConstraints{
-            $0.top.equalTo(self.safeTop())
-            $0.bottom.equalTo(self.safeBottom())
+            $0.top.equalTo(self.view.safeArea.top)
+            $0.bottom.equalTo(self.view.safeArea.bottom)
             $0.leading.equalTo(self.view.snp.leading)
             $0.trailing.equalTo(self.view.snp.trailing)
         }
