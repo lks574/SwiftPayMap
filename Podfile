@@ -11,5 +11,4 @@ target 'SwiftPayMap' do
   pod 'FacebookLogin'
   pod 'RxSwift'
   pod 'RxCocoa'
-
 end

@@ -82,6 +82,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case 4:
             let vc = RxSwiftViewController()
             self.navigationController?.pushViewController(vc, animated: true)
+    
         default:
             break
         }
