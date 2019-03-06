@@ -5,22 +5,38 @@ target 'SwiftPayMap' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   
+  # UI
   pod 'SnapKit'
-  pod 'Then'
+  
+  # Networking
+  pod 'Alamofire'
+  
+  # Json
+  pod 'ObjectMapper'
+  pod 'SwiftyJSON'
+  
+  
+  # SNS
   pod 'KakaoOpenSDK', '~> 1.11'
   pod 'FacebookLogin'
+  
+  # Architecture
+  pod 'ReactorKit'
+  
+  # RX
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'ReactorKit'
   pod 'RxOptional'
   pod 'RxViewController'
   pod 'RxDataSources'
+  pod 'RxKeyboard'
   
-  pod 'ObjectMapper'
-  pod 'Alamofire'
-  pod 'SwiftyJSON'
-  
+  # Image
   pod 'Kingfisher'
   
+  # Etc
+  pod 'Then'
   pod 'ReusableKit'
+  
+  
 end

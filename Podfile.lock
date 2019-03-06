@@ -49,6 +49,9 @@ PODS:
     - Differentiator (~> 3.0)
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
+  - RxKeyboard (0.9.0):
+    - RxCocoa (>= 4.3.1)
+    - RxSwift (>= 4.3.1)
   - RxOptional (3.6.2):
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
@@ -71,6 +74,7 @@ DEPENDENCIES:
   - ReusableKit
   - RxCocoa
   - RxDataSources
+  - RxKeyboard
   - RxOptional
   - RxSwift
   - RxViewController
@@ -95,6 +99,7 @@ SPEC REPOS:
     - RxAtomic
     - RxCocoa
     - RxDataSources
+    - RxKeyboard
     - RxOptional
     - RxSwift
     - RxViewController
@@ -118,6 +123,7 @@ SPEC CHECKSUMS:
   RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
   RxCocoa: 2f35a76bf8887872e28a1914112395b11b8e0e64
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
+  RxKeyboard: 4f782303f499f41577b41c96c6a9a5d7acd51a47
   RxOptional: 80426a0ddbd092573e4c482d8cc13302078c4d5e
   RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
   RxViewController: e93e7c233d5b5b62c32231d69726d55f54081bc6
@@ -125,6 +131,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
 
-PODFILE CHECKSUM: 6684a3ea9125375afe8b9b6ce43e41ed1c26d06c
+PODFILE CHECKSUM: 74990371ee3914d0df22fc1471639019d4dbbeaa
 
 COCOAPODS: 1.6.0

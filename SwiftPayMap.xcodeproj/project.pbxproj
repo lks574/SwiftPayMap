@@ -158,6 +158,7 @@
 		93059204222D022F0005162D /* main */ = {
 			isa = PBXGroup;
 			children = (
+				9352FE4B222FBE91001AD9F8 /* cleverbot */,
 				9352FE46222F93B0001AD9F8 /* apple_map */,
 				9352FE35222F7A21001AD9F8 /* flickr_search */,
 				9352FE2B222F5B40001AD9F8 /* reactor */,
@@ -239,6 +240,13 @@
 				9352FE47222F93BD001AD9F8 /* AppleMapViewController.swift */,
 			);
 			path = apple_map;
+			sourceTree = "<group>";
+		};
+		9352FE4B222FBE91001AD9F8 /* cleverbot */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cleverbot;
 			sourceTree = "<group>";
 		};
 		93AEE816222DFA7E00D98DC9 /* resources */ = {
@@ -391,6 +399,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxKeyboard/RxKeyboard.framework",
 				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxViewController/RxViewController.framework",
@@ -416,6 +425,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxKeyboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxViewController.framework",
