@@ -22,7 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         let homeVC = HomeViewController()
         let navi = UINavigationController(rootViewController: homeVC)
+        
         window?.rootViewController = navi
+        window?.backgroundColor = .white
         window?.makeKeyAndVisible()
         
         FBSDKApplicationDelegate.sharedInstance()?.application(application, didFinishLaunchingWithOptions: launchOptions)

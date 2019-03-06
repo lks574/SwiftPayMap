@@ -89,5 +89,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    
+    
+    
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>accessing photo library</string>
+
 </dict>
 </plist>

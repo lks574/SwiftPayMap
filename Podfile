@@ -14,4 +14,13 @@ target 'SwiftPayMap' do
   pod 'ReactorKit'
   pod 'RxOptional'
   pod 'RxViewController'
+  pod 'RxDataSources'
+  
+  pod 'ObjectMapper'
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+  
+  pod 'Kingfisher'
+  
+  pod 'ReusableKit'
 end
