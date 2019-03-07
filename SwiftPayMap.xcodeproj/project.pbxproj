@@ -34,6 +34,12 @@
 		9352FE48222F93BD001AD9F8 /* AppleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FE47222F93BD001AD9F8 /* AppleMapViewController.swift */; };
 		9352FE4A222F9417001AD9F8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9352FE49222F9417001AD9F8 /* MapKit.framework */; };
 		935F12DE222D37B300D3D4B1 /* Bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F12DD222D37B300D3D4B1 /* Bridge.m */; };
+		938ACD48223095E600EAAFDF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938ACD47223095E600EAAFDF /* ChatViewController.swift */; };
+		938ACD4A223095F900EAAFDF /* ChatViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938ACD49223095F900EAAFDF /* ChatViewReactor.swift */; };
+		938ACD562230ACEE00EAAFDF /* DanbeeMoya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938ACD552230ACEE00EAAFDF /* DanbeeMoya.swift */; };
+		938ACD582230AFE600EAAFDF /* DanbeeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938ACD572230AFE600EAAFDF /* DanbeeService.swift */; };
+		938ACD5A2230B9C600EAAFDF /* DanbeeWelcomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938ACD592230B9C600EAAFDF /* DanbeeWelcomeModel.swift */; };
+		938ACD6122310AC300EAAFDF /* BubbleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938ACD6022310AC300EAAFDF /* BubbleModel.swift */; };
 		93AEE813222DFA3E00D98DC9 /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93AEE812222DFA3E00D98DC9 /* DaumMap.framework */; };
 		93AEE814222DFA3E00D98DC9 /* DaumMap.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 93AEE812222DFA3E00D98DC9 /* DaumMap.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		93AEE818222DFA9C00D98DC9 /* custom_poi_marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AEE817222DFA9C00D98DC9 /* custom_poi_marker.png */; };
@@ -88,6 +94,12 @@
 		9352FE49222F9417001AD9F8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		935F12DC222D37B200D3D4B1 /* SwiftPayMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftPayMap-Bridging-Header.h"; sourceTree = "<group>"; };
 		935F12DD222D37B300D3D4B1 /* Bridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bridge.m; sourceTree = "<group>"; };
+		938ACD47223095E600EAAFDF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		938ACD49223095F900EAAFDF /* ChatViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewReactor.swift; sourceTree = "<group>"; };
+		938ACD552230ACEE00EAAFDF /* DanbeeMoya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanbeeMoya.swift; sourceTree = "<group>"; };
+		938ACD572230AFE600EAAFDF /* DanbeeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanbeeService.swift; sourceTree = "<group>"; };
+		938ACD592230B9C600EAAFDF /* DanbeeWelcomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanbeeWelcomeModel.swift; sourceTree = "<group>"; };
+		938ACD6022310AC300EAAFDF /* BubbleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleModel.swift; sourceTree = "<group>"; };
 		93AEE812222DFA3E00D98DC9 /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumMap.framework; sourceTree = "<group>"; };
 		93AEE817222DFA9C00D98DC9 /* custom_poi_marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custom_poi_marker.png; sourceTree = "<group>"; };
 		93AEE81A222DFC0B00D98DC9 /* KakaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoViewController.swift; sourceTree = "<group>"; };
@@ -158,7 +170,7 @@
 		93059204222D022F0005162D /* main */ = {
 			isa = PBXGroup;
 			children = (
-				9352FE4B222FBE91001AD9F8 /* cleverbot */,
+				9352FE4B222FBE91001AD9F8 /* danbee */,
 				9352FE46222F93B0001AD9F8 /* apple_map */,
 				9352FE35222F7A21001AD9F8 /* flickr_search */,
 				9352FE2B222F5B40001AD9F8 /* reactor */,
@@ -242,11 +254,33 @@
 			path = apple_map;
 			sourceTree = "<group>";
 		};
-		9352FE4B222FBE91001AD9F8 /* cleverbot */ = {
+		9352FE4B222FBE91001AD9F8 /* danbee */ = {
 			isa = PBXGroup;
 			children = (
+				938ACD542230ACD000EAAFDF /* networking */,
+				938ACD4F223099A000EAAFDF /* models */,
+				938ACD47223095E600EAAFDF /* ChatViewController.swift */,
+				938ACD49223095F900EAAFDF /* ChatViewReactor.swift */,
 			);
-			path = cleverbot;
+			path = danbee;
+			sourceTree = "<group>";
+		};
+		938ACD4F223099A000EAAFDF /* models */ = {
+			isa = PBXGroup;
+			children = (
+				938ACD592230B9C600EAAFDF /* DanbeeWelcomeModel.swift */,
+				938ACD6022310AC300EAAFDF /* BubbleModel.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		938ACD542230ACD000EAAFDF /* networking */ = {
+			isa = PBXGroup;
+			children = (
+				938ACD552230ACEE00EAAFDF /* DanbeeMoya.swift */,
+				938ACD572230AFE600EAAFDF /* DanbeeService.swift */,
+			);
+			path = networking;
 			sourceTree = "<group>";
 		};
 		93AEE816222DFA7E00D98DC9 /* resources */ = {
@@ -393,9 +427,12 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/ReusableKit/ReusableKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
@@ -419,9 +456,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReusableKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
@@ -479,13 +519,19 @@
 				9352FE45222F86E7001AD9F8 /* DetailViewController.swift in Sources */,
 				9352FE34222F68E6001AD9F8 /* UIView+Extension.swift in Sources */,
 				9352FE3E222F7BA5001AD9F8 /* Photo.swift in Sources */,
+				938ACD582230AFE600EAAFDF /* DanbeeService.swift in Sources */,
 				9305920B222D05E80005162D /* DaumViewController.swift in Sources */,
 				93AEE820222E310A00D98DC9 /* RxSwiftViewController.swift in Sources */,
 				935F12DE222D37B300D3D4B1 /* Bridge.m in Sources */,
 				9352FE48222F93BD001AD9F8 /* AppleMapViewController.swift in Sources */,
 				9352FE41222F7EFE001AD9F8 /* AppService.swift in Sources */,
+				938ACD6122310AC300EAAFDF /* BubbleModel.swift in Sources */,
+				938ACD4A223095F900EAAFDF /* ChatViewReactor.swift in Sources */,
 				93059208222D027E0005162D /* HomeViewController.swift in Sources */,
+				938ACD48223095E600EAAFDF /* ChatViewController.swift in Sources */,
+				938ACD562230ACEE00EAAFDF /* DanbeeMoya.swift in Sources */,
 				9352FE39222F7AA6001AD9F8 /* PhotoListViewReactor.swift in Sources */,
+				938ACD5A2230B9C600EAAFDF /* DanbeeWelcomeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

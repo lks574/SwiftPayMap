@@ -10,6 +10,8 @@ target 'SwiftPayMap' do
   
   # Networking
   pod 'Alamofire'
+  pod 'Moya/RxSwift'
+  pod 'RxAlamofire'
   
   # Json
   pod 'ObjectMapper'

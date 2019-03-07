@@ -32,7 +32,6 @@ class AppService {
             params["text"] = keyword
             
             Alamofire.request(baseURL, parameters: params, headers: headers).responseJSON { response in
-                
                 switch response.result {
                 case .success(let value):
                     if let result = JSON(value)["photos"]["photo"].rawString(),
