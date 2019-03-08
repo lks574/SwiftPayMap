@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxOptional
 import ReactorKit
 import RxSwift
 
@@ -18,20 +19,19 @@ class ChatViewReactor: Reactor {
     }
     
     enum Mutation{
-        case message(BubbleModel)
+        case message(BubbleModel, Bool)     // welcome인 경우에만 true (최초에 값을 넣기 위해)
         case myMessage(BubbleModel)
     }
     
     struct State {
-        var bubble: [BubbleModel] = []
+        // table 바인딩
+        // SectionModelType 확장해야되며, 배열 형태(section 으로 되어있기 때문)
+        var bubbles: [MyBubbleCellModel]?
     }
 
-    let initialState: ChatViewReactor.State
+    let initialState: ChatViewReactor.State = State()
     
-    init(){
-        initialState = State()
-        
-    }
+    init(){}
     
     
     // Action -> Mutation
@@ -40,22 +40,14 @@ class ChatViewReactor: Reactor {
         case .welcome:
             return DanbeeService.welcome()
                 .map{ BubbleModel(message: $0.result.result[0].message, postion: true) }
-                .map{Mutation.message($0)}
+                .map{Mutation.message($0, true)}
         case .sendMessage(let message):
             return Observable.concat(
-//                Observable<ChatViewReactor.Mutation>.create{ observer in
-//                    .map{ BubbleModel(message: message, postion: true) }
-//                        .map{ Mutation.myMessage($0) }
-//                },
-//                DanbeeService.engine(message: message)
-//                    .map{ _ in BubbleModel(message: message, postion: false) }
-//                    .map{Mutation.myMessage($0)},
-                 DanbeeService.engine(message: message)
+                Observable.just(Mutation.myMessage(BubbleModel(message: message, postion: false))),
+                DanbeeService.engine(message: message)
                     .map{ BubbleModel(message: $0.result.result[0].message, postion: true) }
-                    .map{Mutation.myMessage($0)}
+                    .map{Mutation.message($0, false)}
             )
-            
-            
         }
     }
     
@@ -65,13 +57,28 @@ class ChatViewReactor: Reactor {
         var newState = state
         switch mutation {
         case let .message(bubble):
+//            let bubble = newState.bubbles!
+            if bubble.1 {
+                newState.bubbles = [MyBubbleCellModel(items: [bubble.0])]
+                break
+            }
+            if let firstSection = newState.bubbles, let first = firstSection.first {
+                var bubbleModels = first.items
+                bubbleModels.append(bubble.0)
+                newState.bubbles = [MyBubbleCellModel(items: bubbleModels)]
+            }
 //            if let serch = bubble.serchMessage {
 //                newState.bubble.append(BubbleModel.init(serchMessage: serch, message: bubble.message, postion: false))
 //            }
-            newState.bubble.append(bubble)
+//            newState.bubbles?.append(bubble)
         
         case let .myMessage(myBubble):
-            newState.bubble.append(myBubble)
+            if let firstSection = newState.bubbles, let first = firstSection.first {
+                var bubbleModels = first.items
+                bubbleModels.append(myBubble)
+                newState.bubbles = [MyBubbleCellModel(items: bubbleModels)]
+            }
+//            newState.bubbles?.append(myBubble)
         }
         return newState
     }

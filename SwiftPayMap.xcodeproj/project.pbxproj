@@ -40,6 +40,7 @@
 		938ACD582230AFE600EAAFDF /* DanbeeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938ACD572230AFE600EAAFDF /* DanbeeService.swift */; };
 		938ACD5A2230B9C600EAAFDF /* DanbeeWelcomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938ACD592230B9C600EAAFDF /* DanbeeWelcomeModel.swift */; };
 		938ACD6122310AC300EAAFDF /* BubbleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938ACD6022310AC300EAAFDF /* BubbleModel.swift */; };
+		938C9E552231F089002CA72F /* MyDanbeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938C9E542231F089002CA72F /* MyDanbeeCell.swift */; };
 		93AEE813222DFA3E00D98DC9 /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93AEE812222DFA3E00D98DC9 /* DaumMap.framework */; };
 		93AEE814222DFA3E00D98DC9 /* DaumMap.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 93AEE812222DFA3E00D98DC9 /* DaumMap.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		93AEE818222DFA9C00D98DC9 /* custom_poi_marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AEE817222DFA9C00D98DC9 /* custom_poi_marker.png */; };
@@ -100,6 +101,7 @@
 		938ACD572230AFE600EAAFDF /* DanbeeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanbeeService.swift; sourceTree = "<group>"; };
 		938ACD592230B9C600EAAFDF /* DanbeeWelcomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanbeeWelcomeModel.swift; sourceTree = "<group>"; };
 		938ACD6022310AC300EAAFDF /* BubbleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleModel.swift; sourceTree = "<group>"; };
+		938C9E542231F089002CA72F /* MyDanbeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDanbeeCell.swift; sourceTree = "<group>"; };
 		93AEE812222DFA3E00D98DC9 /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumMap.framework; sourceTree = "<group>"; };
 		93AEE817222DFA9C00D98DC9 /* custom_poi_marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custom_poi_marker.png; sourceTree = "<group>"; };
 		93AEE81A222DFC0B00D98DC9 /* KakaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoViewController.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 		9352FE4B222FBE91001AD9F8 /* danbee */ = {
 			isa = PBXGroup;
 			children = (
+				938C9E532231F06E002CA72F /* views */,
 				938ACD542230ACD000EAAFDF /* networking */,
 				938ACD4F223099A000EAAFDF /* models */,
 				938ACD47223095E600EAAFDF /* ChatViewController.swift */,
@@ -281,6 +284,14 @@
 				938ACD572230AFE600EAAFDF /* DanbeeService.swift */,
 			);
 			path = networking;
+			sourceTree = "<group>";
+		};
+		938C9E532231F06E002CA72F /* views */ = {
+			isa = PBXGroup;
+			children = (
+				938C9E542231F089002CA72F /* MyDanbeeCell.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 		93AEE816222DFA7E00D98DC9 /* resources */ = {
@@ -507,6 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				938C9E552231F089002CA72F /* MyDanbeeCell.swift in Sources */,
 				9352FE2D222F5B5A001AD9F8 /* ReactorKitViewController.swift in Sources */,
 				93AEE81B222DFC0B00D98DC9 /* KakaoViewController.swift in Sources */,
 				93AEE822222E694A00D98DC9 /* ViewModel.swift in Sources */,
