@@ -21,6 +21,7 @@ class DanbeeService {
                 case .success(let response):
                     do{
                         let filteredResponse = try response.filterSuccessfulStatusCodes()
+                        print(try filteredResponse.mapJSON())
                         let responseModel = try filteredResponse.map(ResponseSetApi.self, atKeyPath: "responseSet")
                         observer.onNext(responseModel)
                     }catch let error {

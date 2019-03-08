@@ -8,12 +8,14 @@
 
 import UIKit
 
+import Kingfisher
 import ReactorKit
 //import ReusableKit
 import RxCocoa
 import RxDataSources
 import RxOptional
 import RxSwift
+import RxKeyboard
 
 import RxViewController
 import SnapKit
@@ -50,12 +52,27 @@ class ChatViewController: UIViewController {
         
         // 테이블뷰 cell 연결
         $0.register(MyDanbeeCell.self, forCellReuseIdentifier: myCellIndentifier)
+        
+        $0.separatorStyle = .none
     }
     
     // DataSources 형태는 SectionModelType 가지고 있는 객체여야된다.
     let myDataSources = RxTableViewSectionedReloadDataSource<MyBubbleCellModel>(configureCell: {(dataSource, tableView, indexPath, item) in
         let cell = tableView.dequeueReusableCell(withIdentifier: myCellIndentifier, for: indexPath) as! MyDanbeeCell
         cell.myMessage.text = item.message
+        if let mainImage = item.imgRoute {
+            
+            // 이미지를 다운 받고 cell의 크기를 조정하기 위해
+            cell.mainImageView.kf.setImage(with: URL(string: mainImage), completionHandler: { (_) in
+                cell.setNeedsLayout()
+                
+                UIView.performWithoutAnimation {
+                    tableView.beginUpdates()
+                    tableView.endUpdates()
+                }
+            })
+            
+        }
         return cell
     })
 
@@ -82,14 +99,35 @@ class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "단비 AI 채팅"
         self.view.backgroundColor = UIColor.white
         uiSetting()
+        
+        RxKeyboard.instance.visibleHeight
+            .drive(onNext: { [weak self] frame in
+                self?.keyboardUpdate(hight: frame)
+            }).disposed(by: disposeBag)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         disposeBag = DisposeBag()
+        messageField.resignFirstResponder()
     }
+    
+    private func keyboardUpdate(hight: CGFloat){
+        messageField.snp.updateConstraints{
+            $0.bottom.equalTo(self.view.safeArea.bottom).offset(-hight)
+        }
+    }
+    
+//    private func tableViewScrollBottom(){
+//        if (mainTableView.contentSize.height > mainTableView.frame.size.height){
+//
+//            let Point = CGPoint(x: 0, y:  mainTableView.contentSize.height - mainTableView.frame.size.height)
+//            mainTableView.setContentOffset(Point, animated: true)
+//        }
+//    }
 
     
     
@@ -99,20 +137,21 @@ class ChatViewController: UIViewController {
             self.view.addSubview($0)
         }
         mainTableView.snp.makeConstraints{
-            $0.top.equalTo(messageField.snp.bottom).offset(20)
+            $0.top.equalTo(self.view.safeArea.top).offset(10)
             $0.leading.equalTo(self.view)
             $0.trailing.equalTo(self.view)
-            $0.bottom.equalTo(self.view.safeArea.bottom)
         }
         messageField.snp.makeConstraints{
-            $0.top.equalTo(self.view.safeArea.top).offset(8)
-            $0.centerX.equalTo(self.view)
-            $0.width.equalTo(self.view).multipliedBy(0.7)
-            $0.width.height.equalTo(40)
+            $0.top.equalTo(mainTableView.snp.bottom)
+            $0.bottom.equalTo(self.view.safeArea.bottom)
+            $0.leading.equalTo(self.view)
+            $0.height.equalTo(40)
+            $0.width.equalTo(self.view).multipliedBy(0.8)
         }
         sendButton.snp.makeConstraints{
             $0.centerY.equalTo(messageField)
             $0.leading.equalTo(messageField.snp.trailing)
+            $0.trailing.equalTo(self.view)
         }
 
     }
@@ -124,9 +163,10 @@ extension ChatViewController: ReactorKit.View {
     
     func bind(reactor: ChatViewReactor) {
         // DataSource
-        self.mainTableView.rx.modelSelected(BubbleModel.self).subscribe(onNext: { bubble in
+        self.mainTableView.rx.modelSelected(BubbleModel.self).subscribe(onNext: {[weak self] bubble in
             let vc = DaumViewController()
-            self.navigationController?.pushViewController(vc, animated: true)
+            self?.navigationController?.pushViewController(vc, animated: true)
+//            self?.messageField.resignFirstResponder()
         }).disposed(by: disposeBag)
         
         // Action
@@ -135,7 +175,6 @@ extension ChatViewController: ReactorKit.View {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
-        
         self.sendButton.rx.tap
             // 클릭 후 중복 제거
             .throttle(2, scheduler: MainScheduler.instance)
@@ -143,9 +182,14 @@ extension ChatViewController: ReactorKit.View {
                 self?.messageField.text
             }
             .filterNil()
+            .do(onNext: { [weak self]  _ in
+                self?.messageField.resignFirstResponder()
+            })
             .map{Reactor.Action.sendMessage($0)}
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
+        
+        
         
         
         
@@ -154,6 +198,10 @@ extension ChatViewController: ReactorKit.View {
             .map{$0.bubbles}
             .replaceNilWith([])
             .debug()
+            .do(onNext: { [weak self]  asd in
+                self?.messageField.text = nil
+//                self?.tableViewScrollBottom()
+            })
             // 테이블뷰와 바인딩하기 위해서는 dataSource 의 모델 형태의 배열이 있어야된다.
             .bind(to: mainTableView.rx.items(dataSource: myDataSources))
             .disposed(by: disposeBag)

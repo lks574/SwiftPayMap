@@ -42,13 +42,13 @@ class ChatViewReactor: Reactor {
         switch action {
         case .welcome:
             return DanbeeService.welcome()
-                .map{ BubbleModel(message: $0.result.result[0].message, postion: true) }
+                .map{ BubbleModel(message: $0.result.result[0].message, postion: true, imgRoute: $0.result.result[0].imgRoute) }
                 .map{Mutation.message($0, true)}
         case .sendMessage(let message):
             return Observable.concat(
-                Observable.just(Mutation.myMessage(BubbleModel(message: message, postion: false))),
+                Observable.just(Mutation.myMessage(BubbleModel(message: message, postion: false, imgRoute: nil))),
                 DanbeeService.engine(message: message)
-                    .map{ BubbleModel(message: $0.result.result[0].message, postion: true) }
+                    .map{ BubbleModel(message: $0.result.result[0].message, postion: true, imgRoute: $0.result.result[0].imgRoute) }
                     .map{Mutation.message($0, false)}
             )
         }

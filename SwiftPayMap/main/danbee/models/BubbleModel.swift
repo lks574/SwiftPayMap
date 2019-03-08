@@ -12,6 +12,13 @@ import RxDataSources
 struct BubbleModel {
     let message: String
     let postion: Bool
+    let imgRoute: String?
+}
+
+
+enum BubbleType {
+    case OnlyMessage(bubble: BubbleModel)
+    case ImageMessage(bubble: BubbleModel)
 }
 
 // tableView에 바인딩

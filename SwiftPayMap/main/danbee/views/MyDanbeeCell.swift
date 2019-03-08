@@ -12,6 +12,16 @@ import Then
 
 
 class MyDanbeeCell: UITableViewCell {
+ 
+    let bubbleView = UIView(frame: .zero).then{
+        $0.layer.borderWidth = 1
+        $0.layer.borderColor = UIColor.gray.cgColor
+        $0.layer.cornerRadius = 10
+    }
+    
+    let mainImageView = UIImageView(frame: .zero).then{
+        $0.contentMode = ContentMode.scaleAspectFit
+    }
     
     let myMessage = UILabel().then{
         $0.textColor = UIColor.black
@@ -33,19 +43,36 @@ class MyDanbeeCell: UITableViewCell {
         super.prepareForReuse()
         
         self.myMessage.text = ""
+        mainImageView.image = nil
     }
     
     
     private func uiSetting(){
-        [myMessage].forEach{
+        [bubbleView].forEach{
             $0.translatesAutoresizingMaskIntoConstraints = false
             self.contentView.addSubview($0)
         }
+        [mainImageView, myMessage].forEach{
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            bubbleView.addSubview($0)
+        }
+        bubbleView.snp.makeConstraints{
+            $0.top.equalTo(self.contentView)
+            $0.leading.equalTo(self.contentView).offset(10)
+            $0.trailing.equalTo(self.contentView).multipliedBy(0.7)
+            $0.bottom.equalTo(self.contentView).offset(-10)
+        }
+        
+        mainImageView.snp.makeConstraints{
+            $0.top.equalTo(bubbleView).offset(10)
+            $0.leading.equalTo(bubbleView).offset(10)
+            $0.trailing.equalTo(bubbleView).offset(-10)
+        }
         myMessage.snp.makeConstraints{
-            $0.top.equalTo(self.contentView.snp.top).offset(10)
-            $0.leading.equalTo(self.contentView.snp.leading).offset(10)
-            $0.trailing.equalTo(self.contentView.snp.trailing).offset(-10)
-            $0.bottom.equalTo(self.contentView.snp.bottom).offset(-10)
+            $0.top.equalTo(mainImageView.snp.bottom).offset(10)
+            $0.leading.equalTo(bubbleView).offset(10)
+            $0.trailing.equalTo(bubbleView).offset(-10)
+            $0.bottom.equalTo(bubbleView).offset(-10)
         }
     }
 
