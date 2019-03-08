@@ -13,16 +13,19 @@ import RxSwift
 
 class ChatViewReactor: Reactor {
 
+    // View에서 들어오는 Event
     enum Action{
         case welcome
         case sendMessage(String)
     }
     
+    // state를 변경
     enum Mutation{
         case message(BubbleModel, Bool)     // welcome인 경우에만 true (최초에 값을 넣기 위해)
         case myMessage(BubbleModel)
     }
     
+    // 현재 뷰의 state
     struct State {
         // table 바인딩
         // SectionModelType 확장해야되며, 배열 형태(section 으로 되어있기 때문)
@@ -57,7 +60,8 @@ class ChatViewReactor: Reactor {
         var newState = state
         switch mutation {
         case let .message(bubble):
-//            let bubble = newState.bubbles!
+
+            // welcome 인 경우
             if bubble.1 {
                 newState.bubbles = [MyBubbleCellModel(items: [bubble.0])]
                 break
