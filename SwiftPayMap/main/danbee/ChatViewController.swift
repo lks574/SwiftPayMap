@@ -30,6 +30,7 @@ class ChatViewController: UIViewController {
 
     // 내 채팅창 Cell
     static let myCellIndentifier = "myDanbeeCell"
+    static let aiCellIndentifier = "aiDanbeeCell"
     
 //    struct Reusable {
 //        static let myCell = ReusableCell<MyDanbeeCell>()
@@ -52,28 +53,39 @@ class ChatViewController: UIViewController {
         
         // 테이블뷰 cell 연결
         $0.register(MyDanbeeCell.self, forCellReuseIdentifier: myCellIndentifier)
+        $0.register(AiDanbeeCell.self, forCellReuseIdentifier: aiCellIndentifier)
         
         $0.separatorStyle = .none
     }
     
     // DataSources 형태는 SectionModelType 가지고 있는 객체여야된다.
     let myDataSources = RxTableViewSectionedReloadDataSource<MyBubbleCellModel>(configureCell: {(dataSource, tableView, indexPath, item) in
-        let cell = tableView.dequeueReusableCell(withIdentifier: myCellIndentifier, for: indexPath) as! MyDanbeeCell
-        cell.myMessage.text = item.message
-        if let mainImage = item.imgRoute {
-            
-            // 이미지를 다운 받고 cell의 크기를 조정하기 위해
-            cell.mainImageView.kf.setImage(with: URL(string: mainImage), completionHandler: { (_) in
-                cell.setNeedsLayout()
+        
+        if item.postion {
+            let cell = tableView.dequeueReusableCell(withIdentifier: aiCellIndentifier, for: indexPath) as! AiDanbeeCell
+            cell.selectionStyle = .none
+            cell.myMessage.text = item.message
+            if let mainImage = item.imgRoute {
                 
-                UIView.performWithoutAnimation {
-                    tableView.beginUpdates()
-                    tableView.endUpdates()
-                }
-            })
-            
+                // 이미지를 다운 받고 cell의 크기를 조정하기 위해
+                cell.mainImageView.kf.setImage(with: URL(string: mainImage), completionHandler: { (_) in
+                    cell.setNeedsLayout()
+                    
+                    UIView.performWithoutAnimation {
+                        tableView.beginUpdates()
+                        tableView.endUpdates()
+                    }
+                })
+                
+            }
+            return cell
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: myCellIndentifier, for: indexPath) as! MyDanbeeCell
+            cell.selectionStyle = .none
+            cell.messageLabel.text = item.message
+            return cell
         }
-        return cell
+        
     })
 
     
@@ -109,11 +121,6 @@ class ChatViewController: UIViewController {
             }).disposed(by: disposeBag)
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        disposeBag = DisposeBag()
-        messageField.resignFirstResponder()
-    }
     
     private func keyboardUpdate(hight: CGFloat){
         messageField.snp.updateConstraints{
@@ -160,13 +167,12 @@ class ChatViewController: UIViewController {
 
 extension ChatViewController: ReactorKit.View {
 
-    
     func bind(reactor: ChatViewReactor) {
         // DataSource
         self.mainTableView.rx.modelSelected(BubbleModel.self).subscribe(onNext: {[weak self] bubble in
             let vc = DaumViewController()
             self?.navigationController?.pushViewController(vc, animated: true)
-//            self?.messageField.resignFirstResponder()
+            self?.messageField.resignFirstResponder()
         }).disposed(by: disposeBag)
         
         // Action
@@ -188,9 +194,6 @@ extension ChatViewController: ReactorKit.View {
             .map{Reactor.Action.sendMessage($0)}
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
-        
-        
-        
         
         
         // State
