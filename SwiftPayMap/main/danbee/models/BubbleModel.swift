@@ -15,12 +15,6 @@ struct BubbleModel {
     let imgRoute: String?
 }
 
-
-enum BubbleType {
-    case OnlyMessage(bubble: BubbleModel)
-    case ImageMessage(bubble: BubbleModel)
-}
-
 // tableView에 바인딩
 struct MyBubbleCellModel {
     
