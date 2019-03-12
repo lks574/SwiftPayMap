@@ -39,36 +39,9 @@ class ChatRxViewController: UIViewController {
         $0.placeholder = "message"
         $0.borderStyle = UITextField.BorderStyle.roundedRect
     }
+
     
-    // DataSources 형태는 SectionModelType 가지고 있는 객체여야된다.
-    let myDataSources = RxTableViewSectionedReloadDataSource<MyBubbleCellModel>(configureCell:  { (dataSource, tableView, indexPath, item) in
-        
-        if item.postion {
-            let cell = tableView.dequeueReusableCell(withIdentifier: Identifier.aiChatCell, for: indexPath) as! AiDanbeeCell
-            cell.selectionStyle = .none
-            cell.myMessage.text = item.message
-            if let mainImage = item.imgRoute {
-                
-                // 이미지를 다운 받고 cell의 크기를 조정하기 위해
-                cell.mainImageView.kf.setImage(with: URL(string: mainImage), completionHandler: { (_) in
-                    cell.setNeedsLayout()
-                    
-                    UIView.performWithoutAnimation {
-                        tableView.beginUpdates()
-                        tableView.endUpdates()
-                    }
-                })
-                
-            }
-            return cell
-        }else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: Identifier.myChatCell, for: indexPath) as! MyDanbeeCell
-            cell.selectionStyle = .none
-            cell.messageLabel.text = item.message
-            return cell
-        }
-        
-    })
+    
     
     private let mainTableView = UITableView(frame: .zero, style: UITableView.Style.plain).then{
         $0.backgroundColor = UIColor.white
@@ -101,7 +74,6 @@ class ChatRxViewController: UIViewController {
         if hight == 0 {
             constraint.update(offset: 0)
         }else{
-            
             // safearea로 묶여 있기 때문에 올라올 경우 빼줘아된다.
             if #available(iOS 11.0, *) {
                 constraint?.update(offset: -hight + view.safeAreaInsets.bottom)
@@ -122,6 +94,41 @@ class ChatRxViewController: UIViewController {
     
     
     private func bindSetting(){
+        // DataSources 형태는 SectionModelType 가지고 있는 객체여야된다.
+        let myDataSources = RxTableViewSectionedReloadDataSource<MyBubbleCellModel>(configureCell:  {(dataSource, tableView, indexPath, item) in
+            if item.postion {
+//                let cell2 = tableView.dequeueReusableCell(withIdentifier: Identifier.aiChatCell, for: indexPath) as! AiDanbeeCell
+                let cell = AiDanbeeCell(reuseIdentifier: Identifier.aiChatCell)
+                cell.selectionStyle = .none
+                cell.myMessage.text = item.message
+                if let options = item.options {
+                     cell.optionsArray = options
+                }
+                cell.buttonSubject
+                    .bind(to: self.viewModel.sendMessage)
+                    .disposed(by: cell.disposeBag)
+                if let mainImage = item.imgRoute {
+                    
+                    // 이미지를 다운 받고 cell의 크기를 조정하기 위해
+                    cell.mainImageView.kf.setImage(with: URL(string: mainImage), completionHandler: { (_) in
+                        cell.setNeedsLayout()
+                        
+                        UIView.performWithoutAnimation {
+                            tableView.beginUpdates()
+                            tableView.endUpdates()
+                        }
+                    })
+                    
+                }
+                return cell
+            }else{
+                let cell = tableView.dequeueReusableCell(withIdentifier: Identifier.myChatCell, for: indexPath) as! MyDanbeeCell
+                cell.selectionStyle = .none
+                cell.messageLabel.text = item.message
+                return cell
+            }
+            
+        })
         
         // tableView select (rx메소드가 여러개. model로 받을수도 있고 index로 받을수도 있다)
         mainTableView.rx.itemSelected

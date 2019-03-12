@@ -15,7 +15,6 @@ class ChatViewModel {
     // input
     let sendMessage = PublishSubject<String>()
     
-    
     // output
     let posts = BehaviorSubject<[MyBubbleCellModel]>(value: [])
     let errorMessage = PublishSubject<String>()
@@ -24,7 +23,7 @@ class ChatViewModel {
     
     init(){
         DanbeeService.welcome()
-            .map{BubbleModel(message: $0.result.result[0].message, postion: true, imgRoute: $0.result.result[0].imgRoute)}
+            .map{BubbleModel(apiModel: $0, postion: true)}
             .map{[MyBubbleCellModel(items: [$0])]}
             .subscribe(onNext:{[weak self] (models) in
                 self?.totalCellModels = models
@@ -62,7 +61,7 @@ class ChatViewModel {
     
     private func sendApi(str: String){
         DanbeeService.engine(message: str)
-            .map{ (BubbleModel(message: str, postion: false, imgRoute: nil), BubbleModel(message: $0.result.result[0].message, postion: true, imgRoute: $0.result.result[0].imgRoute))}
+            .map{ (BubbleModel(message: str, postion: false), BubbleModel(apiModel: $0, postion: true))}
             .map{ (MyBubbleCellModel(items: [$0.0]), MyBubbleCellModel(items: [$0.1])) }
             .subscribe(onNext:{[weak self] (myData) in
                 self?.totalCellModels.append(myData.0)
@@ -74,5 +73,9 @@ class ChatViewModel {
     
     func dispose(){
         disposeBag = DisposeBag()
+    }
+    
+    deinit {
+        dispose()
     }
 }

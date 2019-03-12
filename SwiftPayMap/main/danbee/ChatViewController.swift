@@ -63,6 +63,7 @@ class ChatViewController: UIViewController {
         
         if item.postion {
             let cell = tableView.dequeueReusableCell(withIdentifier: aiCellIndentifier, for: indexPath) as! AiDanbeeCell
+           
             cell.selectionStyle = .none
             cell.myMessage.text = item.message
             if let mainImage = item.imgRoute {
