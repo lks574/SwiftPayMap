@@ -41,6 +41,9 @@
 		938ACD5A2230B9C600EAAFDF /* DanbeeWelcomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938ACD592230B9C600EAAFDF /* DanbeeWelcomeModel.swift */; };
 		938ACD6122310AC300EAAFDF /* BubbleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938ACD6022310AC300EAAFDF /* BubbleModel.swift */; };
 		938C9E552231F089002CA72F /* MyDanbeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938C9E542231F089002CA72F /* MyDanbeeCell.swift */; };
+		938FA303223794E400A7E3AB /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FA302223794E400A7E3AB /* AlbumViewController.swift */; };
+		938FA3052237982A00A7E3AB /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FA3042237982A00A7E3AB /* AlbumCollectionViewCell.swift */; };
+		938FA3072237987A00A7E3AB /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FA3062237987A00A7E3AB /* AlbumViewModel.swift */; };
 		9395E4AA2236044800E0E6FC /* AiDanbeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9395E4A92236044800E0E6FC /* AiDanbeeCell.swift */; };
 		9395E4AE22361BE300E0E6FC /* ChatRxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9395E4AD22361BE300E0E6FC /* ChatRxViewController.swift */; };
 		9395E4B022361D6400E0E6FC /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9395E4AF22361D6400E0E6FC /* ChatViewModel.swift */; };
@@ -105,6 +108,9 @@
 		938ACD592230B9C600EAAFDF /* DanbeeWelcomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanbeeWelcomeModel.swift; sourceTree = "<group>"; };
 		938ACD6022310AC300EAAFDF /* BubbleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleModel.swift; sourceTree = "<group>"; };
 		938C9E542231F089002CA72F /* MyDanbeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDanbeeCell.swift; sourceTree = "<group>"; };
+		938FA302223794E400A7E3AB /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		938FA3042237982A00A7E3AB /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		938FA3062237987A00A7E3AB /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
 		9395E4A92236044800E0E6FC /* AiDanbeeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AiDanbeeCell.swift; sourceTree = "<group>"; };
 		9395E4AD22361BE300E0E6FC /* ChatRxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRxViewController.swift; sourceTree = "<group>"; };
 		9395E4AF22361D6400E0E6FC /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
@@ -178,6 +184,7 @@
 		93059204222D022F0005162D /* main */ = {
 			isa = PBXGroup;
 			children = (
+				938FA301223794D400A7E3AB /* album */,
 				9352FE4B222FBE91001AD9F8 /* danbee */,
 				9352FE46222F93B0001AD9F8 /* apple_map */,
 				9352FE35222F7A21001AD9F8 /* flickr_search */,
@@ -300,6 +307,16 @@
 				938C9E542231F089002CA72F /* MyDanbeeCell.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		938FA301223794D400A7E3AB /* album */ = {
+			isa = PBXGroup;
+			children = (
+				938FA302223794E400A7E3AB /* AlbumViewController.swift */,
+				938FA3062237987A00A7E3AB /* AlbumViewModel.swift */,
+				938FA3042237982A00A7E3AB /* AlbumCollectionViewCell.swift */,
+			);
+			path = album;
 			sourceTree = "<group>";
 		};
 		9395E4AB22361BBD00E0E6FC /* rx */ = {
@@ -549,10 +566,13 @@
 				93AEE81B222DFC0B00D98DC9 /* KakaoViewController.swift in Sources */,
 				93AEE822222E694A00D98DC9 /* ViewModel.swift in Sources */,
 				93059221222D0C0B0005162D /* PGViewController.swift in Sources */,
+				938FA303223794E400A7E3AB /* AlbumViewController.swift in Sources */,
 				930591F3222D01C10005162D /* AppDelegate.swift in Sources */,
+				938FA3052237982A00A7E3AB /* AlbumCollectionViewCell.swift in Sources */,
 				9352FE43222F8303001AD9F8 /* PhotoCell.swift in Sources */,
 				9352FE37222F7A49001AD9F8 /* PhotoListViewController.swift in Sources */,
 				9395E4B022361D6400E0E6FC /* ChatViewModel.swift in Sources */,
+				938FA3072237987A00A7E3AB /* AlbumViewModel.swift in Sources */,
 				9352FE3C222F7B1D001AD9F8 /* Photos.swift in Sources */,
 				9352FE31222F5B7A001AD9F8 /* ReactorKitReactor.swift in Sources */,
 				9352FE45222F86E7001AD9F8 /* DetailViewController.swift in Sources */,

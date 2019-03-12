@@ -91,9 +91,13 @@
 	</array>
     
     
-    
+<!--  Save Photos  -->
     <key>NSPhotoLibraryAddUsageDescription</key>
     <string>accessing photo library</string>
-
+    
+<!--  Photos  -->
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string> 사진 사용 </string>
+    
 </dict>
 </plist>
