@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import SnapKit
 import RxSwift
 import RxCocoa
 import RxKeyboard
@@ -20,10 +21,13 @@ class ChatRxViewController: UIViewController {
     
     let viewModel = ChatViewModel()
     
+    var constraint: Constraint!
+    
     struct Identifier {
         static let myChatCell = "myChatCell"
         static let aiChatCell = "aiChatCell"
     }
+    private let messageView = UIView()
     
     private let sendButton = UIButton().then{
         $0.setTitle("보내기", for: .normal)
@@ -92,18 +96,21 @@ class ChatRxViewController: UIViewController {
         bindSetting()
     }
     
+    // Rx 키보드를 통해 키보드 높이를 가져옴.
     private func keyboardUpdate(hight: CGFloat){
         if hight == 0 {
-            messageField.snp.updateConstraints{
-                $0.bottom.equalTo(self.view.safeArea.bottom)
-            }
+            constraint.update(offset: 0)
         }else{
-            messageField.snp.updateConstraints{
-                $0.bottom.equalTo(self.view.snp.bottom).offset(-hight)
+            
+            // safearea로 묶여 있기 때문에 올라올 경우 빼줘아된다.
+            if #available(iOS 11.0, *) {
+                constraint?.update(offset: -hight + view.safeAreaInsets.bottom)
+            } else {
+                constraint?.update(offset: -hight)
             }
         }
-       
         
+
     }
     
     // alertView 보여주기
@@ -116,12 +123,20 @@ class ChatRxViewController: UIViewController {
     
     private func bindSetting(){
         
+        // tableView select (rx메소드가 여러개. model로 받을수도 있고 index로 받을수도 있다)
+        mainTableView.rx.itemSelected
+            .subscribe(onNext:{ [weak self] (_) in
+                self?.messageField.resignFirstResponder()
+            }).disposed(by: disposeBag)
+        
+        // 키보드 라이브러리
         RxKeyboard.instance.visibleHeight
             .drive(onNext: { [weak self] frame in
                 self?.keyboardUpdate(hight: frame)
             }).disposed(by: disposeBag)
         
-        sendButton.rx.tap
+        // send버튼과 키보드의 리턴 버튼을 merge ==> 같은 기능일 경우 combination을 찾아보자
+        Observable.merge(messageField.rx.controlEvent([.editingDidEndOnExit]).asObservable(), sendButton.rx.tap.asObservable())
             .throttle(2, scheduler: MainScheduler.instance)
             .map{ [weak self] in
                 self?.messageField.text
@@ -134,12 +149,13 @@ class ChatRxViewController: UIViewController {
             .bind(to: viewModel.sendMessage)
             .disposed(by: disposeBag)
         
-        
+        // driver : ui(매인쓰레드)에서 사용되는 경우 사용
         viewModel.posts.asDriver(onErrorJustReturn: [])
             .drive(mainTableView.rx.items(dataSource: myDataSources))
             .disposed(by: disposeBag)
         
         
+        // 모든 에러인 경우 알림창 띄우기
         viewModel.errorMessage.asObservable()
             .subscribe(onNext: { [weak self] str in
                 self?.showAlertError(message: str)
@@ -147,26 +163,37 @@ class ChatRxViewController: UIViewController {
     }
     
     private func uiSetting(){
-        [mainTableView, sendButton, messageField].forEach{
+        [mainTableView, messageView].forEach{
             $0.translatesAutoresizingMaskIntoConstraints = false
             self.view.addSubview($0)
+        }
+        
+        [sendButton, messageField].forEach{
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            messageView.addSubview($0)
         }
         mainTableView.snp.makeConstraints{
             $0.top.equalTo(self.view.safeArea.top).offset(10)
             $0.leading.equalTo(self.view)
             $0.trailing.equalTo(self.view)
         }
-        messageField.snp.makeConstraints{
+        messageView.snp.makeConstraints{
             $0.top.equalTo(mainTableView.snp.bottom)
-            $0.bottom.equalTo(self.view.safeArea.bottom)
             $0.leading.equalTo(self.view)
+            $0.trailing.equalTo(self.view)
+            constraint = $0.bottom.equalTo(self.view.safeArea.bottom).constraint
+        }
+        messageField.snp.makeConstraints{
+            $0.top.equalTo(messageView)
+            $0.leading.equalTo(messageView)
             $0.height.equalTo(40)
-            $0.width.equalTo(self.view).multipliedBy(0.8)
+            $0.width.equalTo(messageView).multipliedBy(0.8)
         }
         sendButton.snp.makeConstraints{
-            $0.centerY.equalTo(messageField)
+            $0.top.equalTo(messageView)
             $0.leading.equalTo(messageField.snp.trailing)
-            $0.trailing.equalTo(self.view)
+            $0.trailing.equalTo(messageView)
+            $0.bottom.equalTo(messageView)
         }
     }
 }
