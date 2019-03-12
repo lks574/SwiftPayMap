@@ -105,6 +105,10 @@ class ChatRxViewController: UIViewController {
                      cell.optionsArray = options
                 }
                 cell.buttonSubject
+                    .do(onNext:{ [weak self] _ in
+                        self?.messageField.resignFirstResponder()
+                        self?.messageField.text = ""
+                    })
                     .bind(to: self.viewModel.sendMessage)
                     .disposed(by: cell.disposeBag)
                 if let mainImage = item.imgRoute {
@@ -170,6 +174,7 @@ class ChatRxViewController: UIViewController {
     }
     
     private func uiSetting(){
+        
         [mainTableView, messageView].forEach{
             $0.translatesAutoresizingMaskIntoConstraints = false
             self.view.addSubview($0)
