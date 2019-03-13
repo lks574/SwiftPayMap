@@ -6,7 +6,8 @@
 //  Copyright © 2019년 KyungSeok Lee. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import Hero
 
 class AlbumCollectionViewCell: UICollectionViewCell {
     

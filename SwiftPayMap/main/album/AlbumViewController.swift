@@ -145,6 +145,7 @@ class AlbumViewController: UIViewController {
             
             self.imageManager.requestImage(for: item, targetSize: CGSize(width: item.pixelWidth, height: item.pixelHeight), contentMode: PHImageContentMode.aspectFill, options: nil) { (image, _) in
                 if let image = image {
+                    cell.mainImageView.hero.id = item.description
                     cell.mainImageView.image = image
                 }
             }

@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 import Then
 import Photos
+import Hero
 
 class AlbumDetailViewController: UIViewController {
 
@@ -27,6 +28,8 @@ class AlbumDetailViewController: UIViewController {
         
         uiSetting()
         imageSetting(item: asset)
+        
+        mainImageView.hero.id = asset.description
     }
     
     private func imageSetting(item: PHAsset){
