@@ -41,12 +41,15 @@
 		938ACD5A2230B9C600EAAFDF /* DanbeeWelcomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938ACD592230B9C600EAAFDF /* DanbeeWelcomeModel.swift */; };
 		938ACD6122310AC300EAAFDF /* BubbleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938ACD6022310AC300EAAFDF /* BubbleModel.swift */; };
 		938C9E552231F089002CA72F /* MyDanbeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938C9E542231F089002CA72F /* MyDanbeeCell.swift */; };
+		938F41C922389CF400D87D4C /* CustomPhotoAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938F41C822389CF400D87D4C /* CustomPhotoAlbum.swift */; };
+		938F41D42238F4DD00D87D4C /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938F41D32238F4DD00D87D4C /* AlbumDetailViewController.swift */; };
 		938FA303223794E400A7E3AB /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FA302223794E400A7E3AB /* AlbumViewController.swift */; };
 		938FA3052237982A00A7E3AB /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FA3042237982A00A7E3AB /* AlbumCollectionViewCell.swift */; };
 		938FA3072237987A00A7E3AB /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FA3062237987A00A7E3AB /* AlbumViewModel.swift */; };
 		9395E4AA2236044800E0E6FC /* AiDanbeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9395E4A92236044800E0E6FC /* AiDanbeeCell.swift */; };
 		9395E4AE22361BE300E0E6FC /* ChatRxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9395E4AD22361BE300E0E6FC /* ChatRxViewController.swift */; };
 		9395E4B022361D6400E0E6FC /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9395E4AF22361D6400E0E6FC /* ChatViewModel.swift */; };
+		93AA1D592238812B00598E20 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AA1D582238812B00598E20 /* PhotoModel.swift */; };
 		93AEE813222DFA3E00D98DC9 /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93AEE812222DFA3E00D98DC9 /* DaumMap.framework */; };
 		93AEE814222DFA3E00D98DC9 /* DaumMap.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 93AEE812222DFA3E00D98DC9 /* DaumMap.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		93AEE818222DFA9C00D98DC9 /* custom_poi_marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AEE817222DFA9C00D98DC9 /* custom_poi_marker.png */; };
@@ -108,12 +111,15 @@
 		938ACD592230B9C600EAAFDF /* DanbeeWelcomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanbeeWelcomeModel.swift; sourceTree = "<group>"; };
 		938ACD6022310AC300EAAFDF /* BubbleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleModel.swift; sourceTree = "<group>"; };
 		938C9E542231F089002CA72F /* MyDanbeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDanbeeCell.swift; sourceTree = "<group>"; };
+		938F41C822389CF400D87D4C /* CustomPhotoAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPhotoAlbum.swift; sourceTree = "<group>"; };
+		938F41D32238F4DD00D87D4C /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
 		938FA302223794E400A7E3AB /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		938FA3042237982A00A7E3AB /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		938FA3062237987A00A7E3AB /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
 		9395E4A92236044800E0E6FC /* AiDanbeeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AiDanbeeCell.swift; sourceTree = "<group>"; };
 		9395E4AD22361BE300E0E6FC /* ChatRxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRxViewController.swift; sourceTree = "<group>"; };
 		9395E4AF22361D6400E0E6FC /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		93AA1D582238812B00598E20 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		93AEE812222DFA3E00D98DC9 /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumMap.framework; sourceTree = "<group>"; };
 		93AEE817222DFA9C00D98DC9 /* custom_poi_marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custom_poi_marker.png; sourceTree = "<group>"; };
 		93AEE81A222DFC0B00D98DC9 /* KakaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoViewController.swift; sourceTree = "<group>"; };
@@ -309,11 +315,22 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		938F41C722389CE500D87D4C /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				938F41C822389CF400D87D4C /* CustomPhotoAlbum.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		938FA301223794D400A7E3AB /* album */ = {
 			isa = PBXGroup;
 			children = (
+				938F41C722389CE500D87D4C /* utils */,
+				93AA1D57223880F300598E20 /* models */,
 				938FA302223794E400A7E3AB /* AlbumViewController.swift */,
 				938FA3062237987A00A7E3AB /* AlbumViewModel.swift */,
+				938F41D32238F4DD00D87D4C /* AlbumDetailViewController.swift */,
 				938FA3042237982A00A7E3AB /* AlbumCollectionViewCell.swift */,
 			);
 			path = album;
@@ -334,6 +351,14 @@
 				9395E4AF22361D6400E0E6FC /* ChatViewModel.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		93AA1D57223880F300598E20 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				93AA1D582238812B00598E20 /* PhotoModel.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		93AEE816222DFA7E00D98DC9 /* resources */ = {
@@ -479,6 +504,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
@@ -508,6 +534,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
@@ -585,11 +612,14 @@
 				9352FE48222F93BD001AD9F8 /* AppleMapViewController.swift in Sources */,
 				9352FE41222F7EFE001AD9F8 /* AppService.swift in Sources */,
 				938ACD6122310AC300EAAFDF /* BubbleModel.swift in Sources */,
+				938F41C922389CF400D87D4C /* CustomPhotoAlbum.swift in Sources */,
 				938ACD4A223095F900EAAFDF /* ChatViewReactor.swift in Sources */,
 				93059208222D027E0005162D /* HomeViewController.swift in Sources */,
 				938ACD48223095E600EAAFDF /* ChatViewController.swift in Sources */,
 				938ACD562230ACEE00EAAFDF /* DanbeeMoya.swift in Sources */,
 				9352FE39222F7AA6001AD9F8 /* PhotoListViewReactor.swift in Sources */,
+				93AA1D592238812B00598E20 /* PhotoModel.swift in Sources */,
+				938F41D42238F4DD00D87D4C /* AlbumDetailViewController.swift in Sources */,
 				9395E4AE22361BE300E0E6FC /* ChatRxViewController.swift in Sources */,
 				938ACD5A2230B9C600EAAFDF /* DanbeeWelcomeModel.swift in Sources */,
 			);
@@ -740,8 +770,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D9BK789354;
+				DEVELOPMENT_TEAM = 9H9765TZHW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -752,8 +783,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ysnzp.SwiftPayMap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ysnzp.SwiftPay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftPayMap/SwiftPayMap-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -768,8 +800,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D9BK789354;
+				DEVELOPMENT_TEAM = 9H9765TZHW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -780,8 +813,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ysnzp.SwiftPayMap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ysnzp.SwiftPay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftPayMap/SwiftPayMap-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

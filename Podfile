@@ -40,5 +40,7 @@ target 'SwiftPayMap' do
   pod 'Then'
   pod 'ReusableKit'
   
+  # animation
+  pod 'Hero'
   
 end

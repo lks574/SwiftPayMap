@@ -31,23 +31,19 @@
 				<string>kakaof10b91b1909e590781e0b9769764e2fc</string>
 			</array>
 		</dict>
-        
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>fb2346251078721011</string>
-            </array>
-        </dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb2346251078721011</string>
+			</array>
+		</dict>
 	</array>
-    
-    
-    <key>FacebookAppID</key>
-    <string>2346251078721011</string>
-    <key>FacebookDisplayName</key>
-    <string>SwiftPayMap</string>
-    
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>2346251078721011</string>
+	<key>FacebookDisplayName</key>
+	<string>SwiftPayMap</string>
 	<key>KAKAO_APP_KEY</key>
 	<string>f10b91b1909e590781e0b9769764e2fc</string>
 	<key>LSApplicationQueriesSchemes</key>
@@ -55,19 +51,19 @@
 		<string>kakaof10b91b1909e590781e0b9769764e2fc</string>
 		<string>kakaokompassauth</string>
 		<string>storykompassauth</string>
-        
-        <string>fbapi</string>
-        <string>fb-messenger-share-api</string>
-        <string>fbauth2</string>
-        <string>fbshareextension</string>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
 	</array>
-    
-    
-    
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>앱을 사용하는 동안 위치를 추적합니다.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>accessing photo library</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string> 사진 사용 </string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -89,15 +85,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    
-    
-<!--  Save Photos  -->
-    <key>NSPhotoLibraryAddUsageDescription</key>
-    <string>accessing photo library</string>
-    
-<!--  Photos  -->
-    <key>NSPhotoLibraryUsageDescription</key>
-    <string> 사진 사용 </string>
-    
 </dict>
 </plist>

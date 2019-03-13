@@ -25,6 +25,7 @@ class AlbumCollectionViewCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        mainImageView.image = nil
     }
     
     

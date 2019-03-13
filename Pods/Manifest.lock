@@ -19,6 +19,7 @@ PODS:
     - Bolts (~> 1.9)
   - FBSDKLoginKit (4.40.0):
     - FBSDKCoreKit
+  - Hero (1.4.0)
   - KakaoOpenSDK (1.11.1):
     - KakaoOpenSDK/KakaoCommon (= 1.11.1)
     - KakaoOpenSDK/KakaoLink (= 1.11.1)
@@ -79,6 +80,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - FacebookLogin
+  - Hero
   - KakaoOpenSDK (~> 1.11)
   - Kingfisher
   - Moya/RxSwift
@@ -105,6 +107,7 @@ SPEC REPOS:
     - FacebookLogin
     - FBSDKCoreKit
     - FBSDKLoginKit
+    - Hero
     - KakaoOpenSDK
     - Kingfisher
     - Moya
@@ -132,6 +135,7 @@ SPEC CHECKSUMS:
   FacebookLogin: ebcf34714a1cb9f0759d9f071cfb01ed500996cf
   FBSDKCoreKit: ae214474b25033399c131dc81d258e412582a2ba
   FBSDKLoginKit: 7a1e411d46acc8834588eca437daf34de42e1d52
+  Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   KakaoOpenSDK: eb8eae72c3943fa51ac1420e7a1268730ee99d61
   Kingfisher: 2558186963e5be42d98c5b110ccb3130148b77e4
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
@@ -151,6 +155,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
 
-PODFILE CHECKSUM: 7a909d9101273593bf628a927077697e1519cae8
+PODFILE CHECKSUM: a4822e7189bc17a1402d9c83cf664890a209407a
 
 COCOAPODS: 1.6.0
