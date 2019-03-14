@@ -35,6 +35,14 @@
 		9352FE4A222F9417001AD9F8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9352FE49222F9417001AD9F8 /* MapKit.framework */; };
 		9357BF042239D9C8004148F1 /* PHAsset+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357BF032239D9C8004148F1 /* PHAsset+Extension.swift */; };
 		9357BF062239E590004148F1 /* AlbumSideViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357BF052239E590004148F1 /* AlbumSideViewContoller.swift */; };
+		9357BF082239EC48004148F1 /* WaPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357BF072239EC48004148F1 /* WaPlaceViewController.swift */; };
+		9357BF0B2239ED79004148F1 /* WaPlaceSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357BF0A2239ED79004148F1 /* WaPlaceSearchViewController.swift */; };
+		9357BF0D2239F199004148F1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357BF0C2239F199004148F1 /* UIColor+Extension.swift */; };
+		9357BF10223A1F1C004148F1 /* WaplaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357BF0F223A1F1C004148F1 /* WaplaceTableViewCell.swift */; };
+		9357BF13223A21D6004148F1 /* WaplaceMainTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357BF12223A21D6004148F1 /* WaplaceMainTableModel.swift */; };
+		9357BF15223A30CE004148F1 /* WaplaceExpertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357BF14223A30CE004148F1 /* WaplaceExpertViewController.swift */; };
+		9357BF17223A3337004148F1 /* WaplaceExpertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357BF16223A3337004148F1 /* WaplaceExpertTableViewCell.swift */; };
+		9357BF19223A376B004148F1 /* WaplaceExpertCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357BF18223A376B004148F1 /* WaplaceExpertCellModel.swift */; };
 		935F12DE222D37B300D3D4B1 /* Bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F12DD222D37B300D3D4B1 /* Bridge.m */; };
 		938ACD48223095E600EAAFDF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938ACD47223095E600EAAFDF /* ChatViewController.swift */; };
 		938ACD4A223095F900EAAFDF /* ChatViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938ACD49223095F900EAAFDF /* ChatViewReactor.swift */; };
@@ -106,6 +114,14 @@
 		9352FE49222F9417001AD9F8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9357BF032239D9C8004148F1 /* PHAsset+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHAsset+Extension.swift"; sourceTree = "<group>"; };
 		9357BF052239E590004148F1 /* AlbumSideViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumSideViewContoller.swift; sourceTree = "<group>"; };
+		9357BF072239EC48004148F1 /* WaPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaPlaceViewController.swift; sourceTree = "<group>"; };
+		9357BF0A2239ED79004148F1 /* WaPlaceSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaPlaceSearchViewController.swift; sourceTree = "<group>"; };
+		9357BF0C2239F199004148F1 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		9357BF0F223A1F1C004148F1 /* WaplaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaplaceTableViewCell.swift; sourceTree = "<group>"; };
+		9357BF12223A21D6004148F1 /* WaplaceMainTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaplaceMainTableModel.swift; sourceTree = "<group>"; };
+		9357BF14223A30CE004148F1 /* WaplaceExpertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaplaceExpertViewController.swift; sourceTree = "<group>"; };
+		9357BF16223A3337004148F1 /* WaplaceExpertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaplaceExpertTableViewCell.swift; sourceTree = "<group>"; };
+		9357BF18223A376B004148F1 /* WaplaceExpertCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaplaceExpertCellModel.swift; sourceTree = "<group>"; };
 		935F12DC222D37B200D3D4B1 /* SwiftPayMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftPayMap-Bridging-Header.h"; sourceTree = "<group>"; };
 		935F12DD222D37B300D3D4B1 /* Bridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bridge.m; sourceTree = "<group>"; };
 		938ACD47223095E600EAAFDF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +210,7 @@
 		93059204222D022F0005162D /* main */ = {
 			isa = PBXGroup;
 			children = (
+				9357BF092239EC4F004148F1 /* waplace */,
 				938FA301223794D400A7E3AB /* album */,
 				9352FE4B222FBE91001AD9F8 /* danbee */,
 				9352FE46222F93B0001AD9F8 /* apple_map */,
@@ -238,6 +255,7 @@
 			children = (
 				9352FE33222F68E6001AD9F8 /* UIView+Extension.swift */,
 				9357BF032239D9C8004148F1 /* PHAsset+Extension.swift */,
+				9357BF0C2239F199004148F1 /* UIColor+Extension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -291,6 +309,36 @@
 				938ACD49223095F900EAAFDF /* ChatViewReactor.swift */,
 			);
 			path = danbee;
+			sourceTree = "<group>";
+		};
+		9357BF092239EC4F004148F1 /* waplace */ = {
+			isa = PBXGroup;
+			children = (
+				9357BF11223A21AE004148F1 /* models */,
+				9357BF0E223A1F05004148F1 /* views */,
+				9357BF072239EC48004148F1 /* WaPlaceViewController.swift */,
+				9357BF0A2239ED79004148F1 /* WaPlaceSearchViewController.swift */,
+				9357BF14223A30CE004148F1 /* WaplaceExpertViewController.swift */,
+			);
+			path = waplace;
+			sourceTree = "<group>";
+		};
+		9357BF0E223A1F05004148F1 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				9357BF0F223A1F1C004148F1 /* WaplaceTableViewCell.swift */,
+				9357BF16223A3337004148F1 /* WaplaceExpertTableViewCell.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		9357BF11223A21AE004148F1 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				9357BF12223A21D6004148F1 /* WaplaceMainTableModel.swift */,
+				9357BF18223A376B004148F1 /* WaplaceExpertCellModel.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		938ACD4F223099A000EAAFDF /* models */ = {
@@ -603,24 +651,31 @@
 				93059221222D0C0B0005162D /* PGViewController.swift in Sources */,
 				938FA303223794E400A7E3AB /* AlbumViewController.swift in Sources */,
 				930591F3222D01C10005162D /* AppDelegate.swift in Sources */,
+				9357BF0B2239ED79004148F1 /* WaPlaceSearchViewController.swift in Sources */,
 				938FA3052237982A00A7E3AB /* AlbumCollectionViewCell.swift in Sources */,
+				9357BF17223A3337004148F1 /* WaplaceExpertTableViewCell.swift in Sources */,
+				9357BF19223A376B004148F1 /* WaplaceExpertCellModel.swift in Sources */,
 				9352FE43222F8303001AD9F8 /* PhotoCell.swift in Sources */,
 				9352FE37222F7A49001AD9F8 /* PhotoListViewController.swift in Sources */,
 				9395E4B022361D6400E0E6FC /* ChatViewModel.swift in Sources */,
 				938FA3072237987A00A7E3AB /* AlbumViewModel.swift in Sources */,
 				9352FE3C222F7B1D001AD9F8 /* Photos.swift in Sources */,
+				9357BF13223A21D6004148F1 /* WaplaceMainTableModel.swift in Sources */,
 				9352FE31222F5B7A001AD9F8 /* ReactorKitReactor.swift in Sources */,
 				9352FE45222F86E7001AD9F8 /* DetailViewController.swift in Sources */,
+				9357BF10223A1F1C004148F1 /* WaplaceTableViewCell.swift in Sources */,
 				9352FE34222F68E6001AD9F8 /* UIView+Extension.swift in Sources */,
 				9352FE3E222F7BA5001AD9F8 /* Photo.swift in Sources */,
 				938ACD582230AFE600EAAFDF /* DanbeeService.swift in Sources */,
 				9305920B222D05E80005162D /* DaumViewController.swift in Sources */,
+				9357BF082239EC48004148F1 /* WaPlaceViewController.swift in Sources */,
 				93AEE820222E310A00D98DC9 /* RxSwiftViewController.swift in Sources */,
 				935F12DE222D37B300D3D4B1 /* Bridge.m in Sources */,
 				9352FE48222F93BD001AD9F8 /* AppleMapViewController.swift in Sources */,
 				9352FE41222F7EFE001AD9F8 /* AppService.swift in Sources */,
 				938ACD6122310AC300EAAFDF /* BubbleModel.swift in Sources */,
 				938F41C922389CF400D87D4C /* CustomPhotoAlbum.swift in Sources */,
+				9357BF15223A30CE004148F1 /* WaplaceExpertViewController.swift in Sources */,
 				938ACD4A223095F900EAAFDF /* ChatViewReactor.swift in Sources */,
 				93059208222D027E0005162D /* HomeViewController.swift in Sources */,
 				938ACD48223095E600EAAFDF /* ChatViewController.swift in Sources */,
@@ -632,6 +687,7 @@
 				938F41D42238F4DD00D87D4C /* AlbumDetailViewController.swift in Sources */,
 				9395E4AE22361BE300E0E6FC /* ChatRxViewController.swift in Sources */,
 				938ACD5A2230B9C600EAAFDF /* DanbeeWelcomeModel.swift in Sources */,
+				9357BF0D2239F199004148F1 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
