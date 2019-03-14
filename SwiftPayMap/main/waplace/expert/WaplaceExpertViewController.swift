@@ -69,7 +69,8 @@ class WaplaceExpertViewController: UIViewController {
         
         expertTableView.rx.modelSelected(WaplaceExpertModel.self).asDriver()
             .drive(onNext:{[weak self] item in
-                
+                let vc = WaplaceExpertDetailViewController()
+                self?.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: disposeBag)
         
         expertTableView.rx.itemSelected.asObservable()

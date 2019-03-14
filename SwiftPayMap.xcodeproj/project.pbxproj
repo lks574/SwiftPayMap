@@ -21,6 +21,7 @@
 		9305921B222D08C90005162D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9305921A222D08C90005162D /* SystemConfiguration.framework */; };
 		9305921D222D08D10005162D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9305921C222D08D10005162D /* OpenGLES.framework */; };
 		93059221222D0C0B0005162D /* PGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93059220222D0C0B0005162D /* PGViewController.swift */; };
+		9305F055223A77C200FFDF57 /* WaplaceExpertDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305F054223A77C200FFDF57 /* WaplaceExpertDetailViewController.swift */; };
 		9352FE2D222F5B5A001AD9F8 /* ReactorKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FE2C222F5B5A001AD9F8 /* ReactorKitViewController.swift */; };
 		9352FE31222F5B7A001AD9F8 /* ReactorKitReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FE30222F5B7A001AD9F8 /* ReactorKitReactor.swift */; };
 		9352FE34222F68E6001AD9F8 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FE33222F68E6001AD9F8 /* UIView+Extension.swift */; };
@@ -100,6 +101,7 @@
 		9305921A222D08C90005162D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9305921C222D08D10005162D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		93059220222D0C0B0005162D /* PGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGViewController.swift; sourceTree = "<group>"; };
+		9305F054223A77C200FFDF57 /* WaplaceExpertDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaplaceExpertDetailViewController.swift; sourceTree = "<group>"; };
 		9352FE2C222F5B5A001AD9F8 /* ReactorKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorKitViewController.swift; sourceTree = "<group>"; };
 		9352FE30222F5B7A001AD9F8 /* ReactorKitReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorKitReactor.swift; sourceTree = "<group>"; };
 		9352FE33222F68E6001AD9F8 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -241,6 +243,15 @@
 			path = pg;
 			sourceTree = "<group>";
 		};
+		9305F056223A77DE00FFDF57 /* expert */ = {
+			isa = PBXGroup;
+			children = (
+				9357BF14223A30CE004148F1 /* WaplaceExpertViewController.swift */,
+				9305F054223A77C200FFDF57 /* WaplaceExpertDetailViewController.swift */,
+			);
+			path = expert;
+			sourceTree = "<group>";
+		};
 		9352FE2B222F5B40001AD9F8 /* reactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,11 +325,11 @@
 		9357BF092239EC4F004148F1 /* waplace */ = {
 			isa = PBXGroup;
 			children = (
+				9305F056223A77DE00FFDF57 /* expert */,
 				9357BF11223A21AE004148F1 /* models */,
 				9357BF0E223A1F05004148F1 /* views */,
 				9357BF072239EC48004148F1 /* WaPlaceViewController.swift */,
 				9357BF0A2239ED79004148F1 /* WaPlaceSearchViewController.swift */,
-				9357BF14223A30CE004148F1 /* WaplaceExpertViewController.swift */,
 			);
 			path = waplace;
 			sourceTree = "<group>";
@@ -666,6 +677,7 @@
 				9357BF10223A1F1C004148F1 /* WaplaceTableViewCell.swift in Sources */,
 				9352FE34222F68E6001AD9F8 /* UIView+Extension.swift in Sources */,
 				9352FE3E222F7BA5001AD9F8 /* Photo.swift in Sources */,
+				9305F055223A77C200FFDF57 /* WaplaceExpertDetailViewController.swift in Sources */,
 				938ACD582230AFE600EAAFDF /* DanbeeService.swift in Sources */,
 				9305920B222D05E80005162D /* DaumViewController.swift in Sources */,
 				9357BF082239EC48004148F1 /* WaPlaceViewController.swift in Sources */,
