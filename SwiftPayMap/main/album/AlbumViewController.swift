@@ -42,10 +42,7 @@ class AlbumViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
         self.navigationItem.title = "앨범"
         
-        Observable.just(Void())
-            .subscribe(onNext:{
-                self.viewModel.didLoad.onNext(())
-            }).disposed(by: disposeBag)
+        
         
         uiSetting()
         binding()
@@ -140,29 +137,44 @@ class AlbumViewController: UIViewController {
     
     private func binding(){
     
+        // 들어오자마자 바로 ViewModel에 전달
+        Observable.just(Void())
+            .subscribe(onNext:{
+                self.viewModel.didLoad.onCompleted()
+            }).disposed(by: disposeBag)
+        
         let dataSources = RxCollectionViewSectionedReloadDataSource<PhotoModel>(configureCell: { (dataSource, collectionView, indexPath, item) -> UICollectionViewCell in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifier.albumIdentifier, for: indexPath) as! AlbumCollectionViewCell
             
             self.imageManager.requestImage(for: item, targetSize: CGSize(width: item.pixelWidth, height: item.pixelHeight), contentMode: PHImageContentMode.aspectFill, options: nil) { (image, _) in
                 if let image = image {
-                    cell.mainImageView.hero.id = item.description
+                    // 각 cell에 imageView에 hero id 추가
+                    cell.mainImageView.hero.id = item.originalFilename
                     cell.mainImageView.image = image
                 }
             }
             
             return cell
         })
+        
+        // UICollectionViewDelegateFlowLayout 을 사용하기 때문에
         albumCollectionView.rx.setDelegate(self).disposed(by: disposeBag)
         
+        // datasource 추가
         viewModel.posts.asDriver(onErrorJustReturn: [])
             .drive(albumCollectionView.rx.items(dataSource: dataSources))
             .disposed(by: disposeBag)
         
+        // collectionViewCell selected
         albumCollectionView.rx.modelSelected(PHAsset.self)
             .subscribe(onNext:{ asd in
                 let vc = AlbumDetailViewController()
                 vc.asset = asd
-                self.navigationController?.pushViewController(vc, animated: true)
+                
+                // hero animation을 사용하기 위해서는 다음 ViewController에 hero enable을 해줘야된다.
+                // navigation이 있다면 navi에 추가해야된다.
+                vc.hero.isEnabled = true
+                self.present(vc, animated: true, completion: nil)
             }).disposed(by: disposeBag)
         
     }

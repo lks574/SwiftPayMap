@@ -24,7 +24,7 @@ class AlbumViewModel {
     init(){
         
         didLoad.asObservable()
-            .subscribe(onNext:{
+            .subscribe(onCompleted: {
                 self.posts.onNext(CustomPhotoAlbum.allImage(sort: "creationDate"))
             }).disposed(by: disposeBag)
     }

@@ -33,6 +33,7 @@
 		9352FE45222F86E7001AD9F8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FE44222F86E7001AD9F8 /* DetailViewController.swift */; };
 		9352FE48222F93BD001AD9F8 /* AppleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FE47222F93BD001AD9F8 /* AppleMapViewController.swift */; };
 		9352FE4A222F9417001AD9F8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9352FE49222F9417001AD9F8 /* MapKit.framework */; };
+		9357BF042239D9C8004148F1 /* PHAsset+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357BF032239D9C8004148F1 /* PHAsset+Extension.swift */; };
 		935F12DE222D37B300D3D4B1 /* Bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F12DD222D37B300D3D4B1 /* Bridge.m */; };
 		938ACD48223095E600EAAFDF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938ACD47223095E600EAAFDF /* ChatViewController.swift */; };
 		938ACD4A223095F900EAAFDF /* ChatViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938ACD49223095F900EAAFDF /* ChatViewReactor.swift */; };
@@ -102,6 +103,7 @@
 		9352FE44222F86E7001AD9F8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9352FE47222F93BD001AD9F8 /* AppleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMapViewController.swift; sourceTree = "<group>"; };
 		9352FE49222F9417001AD9F8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9357BF032239D9C8004148F1 /* PHAsset+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHAsset+Extension.swift"; sourceTree = "<group>"; };
 		935F12DC222D37B200D3D4B1 /* SwiftPayMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftPayMap-Bridging-Header.h"; sourceTree = "<group>"; };
 		935F12DD222D37B300D3D4B1 /* Bridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bridge.m; sourceTree = "<group>"; };
 		938ACD47223095E600EAAFDF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				9352FE33222F68E6001AD9F8 /* UIView+Extension.swift */,
+				9357BF032239D9C8004148F1 /* PHAsset+Extension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -617,6 +620,7 @@
 				93059208222D027E0005162D /* HomeViewController.swift in Sources */,
 				938ACD48223095E600EAAFDF /* ChatViewController.swift in Sources */,
 				938ACD562230ACEE00EAAFDF /* DanbeeMoya.swift in Sources */,
+				9357BF042239D9C8004148F1 /* PHAsset+Extension.swift in Sources */,
 				9352FE39222F7AA6001AD9F8 /* PhotoListViewReactor.swift in Sources */,
 				93AA1D592238812B00598E20 /* PhotoModel.swift in Sources */,
 				938F41D42238F4DD00D87D4C /* AlbumDetailViewController.swift in Sources */,
