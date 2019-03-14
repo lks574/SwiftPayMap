@@ -15,6 +15,8 @@ import RxViewController
 import RxDataSources
 import Photos
 
+import SideMenu
+
 class AlbumViewController: UIViewController {
     var disposeBag = DisposeBag()
     let imageManager = PHCachingImageManager()
@@ -42,8 +44,7 @@ class AlbumViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
         self.navigationItem.title = "앨범"
         
-        
-        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "side", style: UIBarButtonItem.Style.plain, target: self, action: #selector(sideOpenAction(_:)))
         uiSetting()
         binding()
 
@@ -55,6 +56,21 @@ class AlbumViewController: UIViewController {
 //            guard assetCollection != nil else { return }
 //            print(assetCollection!)
 //        }
+    }
+    
+    // Side menu
+    @objc private func sideOpenAction(_ snder: UIBarButtonItem){
+        let vc = AlbumSideViewContoller()
+        
+        // 불러 오려는 화면에 navigation이 확장된 UISideMenuNavigationController을 사용해야된다.
+        // 설정 완료 후에는 navi를 present한다.
+        let menuRightNavigationCotoller = UISideMenuNavigationController(rootViewController: vc)
+        SideMenuManager.default.menuRightNavigationController = menuRightNavigationCotoller
+    
+        SideMenuManager.default.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
+        SideMenuManager.default.menuFadeStatusBar = false
+        
+        self.present(SideMenuManager.default.menuRightNavigationController!, animated: true, completion: nil)
     }
     
     

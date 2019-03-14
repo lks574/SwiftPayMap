@@ -34,6 +34,7 @@
 		9352FE48222F93BD001AD9F8 /* AppleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352FE47222F93BD001AD9F8 /* AppleMapViewController.swift */; };
 		9352FE4A222F9417001AD9F8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9352FE49222F9417001AD9F8 /* MapKit.framework */; };
 		9357BF042239D9C8004148F1 /* PHAsset+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357BF032239D9C8004148F1 /* PHAsset+Extension.swift */; };
+		9357BF062239E590004148F1 /* AlbumSideViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357BF052239E590004148F1 /* AlbumSideViewContoller.swift */; };
 		935F12DE222D37B300D3D4B1 /* Bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F12DD222D37B300D3D4B1 /* Bridge.m */; };
 		938ACD48223095E600EAAFDF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938ACD47223095E600EAAFDF /* ChatViewController.swift */; };
 		938ACD4A223095F900EAAFDF /* ChatViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938ACD49223095F900EAAFDF /* ChatViewReactor.swift */; };
@@ -104,6 +105,7 @@
 		9352FE47222F93BD001AD9F8 /* AppleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMapViewController.swift; sourceTree = "<group>"; };
 		9352FE49222F9417001AD9F8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9357BF032239D9C8004148F1 /* PHAsset+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHAsset+Extension.swift"; sourceTree = "<group>"; };
+		9357BF052239E590004148F1 /* AlbumSideViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumSideViewContoller.swift; sourceTree = "<group>"; };
 		935F12DC222D37B200D3D4B1 /* SwiftPayMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftPayMap-Bridging-Header.h"; sourceTree = "<group>"; };
 		935F12DD222D37B300D3D4B1 /* Bridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bridge.m; sourceTree = "<group>"; };
 		938ACD47223095E600EAAFDF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 				938FA3062237987A00A7E3AB /* AlbumViewModel.swift */,
 				938F41D32238F4DD00D87D4C /* AlbumDetailViewController.swift */,
 				938FA3042237982A00A7E3AB /* AlbumCollectionViewCell.swift */,
+				9357BF052239E590004148F1 /* AlbumSideViewContoller.swift */,
 			);
 			path = album;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxViewController/RxViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
@@ -552,6 +556,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
@@ -619,6 +624,7 @@
 				938ACD4A223095F900EAAFDF /* ChatViewReactor.swift in Sources */,
 				93059208222D027E0005162D /* HomeViewController.swift in Sources */,
 				938ACD48223095E600EAAFDF /* ChatViewController.swift in Sources */,
+				9357BF062239E590004148F1 /* AlbumSideViewContoller.swift in Sources */,
 				938ACD562230ACEE00EAAFDF /* DanbeeMoya.swift in Sources */,
 				9357BF042239D9C8004148F1 /* PHAsset+Extension.swift in Sources */,
 				9352FE39222F7AA6001AD9F8 /* PhotoListViewReactor.swift in Sources */,

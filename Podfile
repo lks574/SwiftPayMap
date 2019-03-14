@@ -43,4 +43,7 @@ target 'SwiftPayMap' do
   # animation
   pod 'Hero'
   
+  # side
+  pod 'SideMenu'
+  
 end
