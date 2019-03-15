@@ -7,19 +7,21 @@
 //
 
 import Foundation
+import SnapKit
 import RxSwift
 import RxCocoa
 import RxDataSources
 import RxOptional
 import RxViewController
 
+/** 전문가 정보 */
 class WaplaceExpertDetailViewController: UIViewController {
 
     var disposeBag = DisposeBag()
     
     let topView = InnerTopView()
+    let menuView = MenuButtonsView()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,17 +33,33 @@ class WaplaceExpertDetailViewController: UIViewController {
     }
     
     private func binding(){
-        
+        menuView.profileButton.rx.tap
+            .subscribe(onNext:{
+                self.menuView.menuModel = 0
+            }).disposed(by: disposeBag)
+        menuView.portfolioButton.rx.tap
+            .subscribe(onNext:{
+                self.menuView.menuModel = 1
+            }).disposed(by: disposeBag)
+        menuView.reviewButton.rx.tap
+            .subscribe(onNext:{
+                self.menuView.menuModel = 2
+            }).disposed(by: disposeBag)
     }
     
     private func uiSetting(){
         topView.innerModel = InnerTopModel(title: "본구조엔지니어링건축사무소", imageStr: "search-black", buisnessType: "개인사업자", cido: "서울", UsageType: "실내인테리어", career: "3년", phone: "02-0000-0000", homepage: "www.waple.com")
-        [topView].forEach{
+        [topView, menuView].forEach{
             $0.translatesAutoresizingMaskIntoConstraints = false
             self.view.addSubview($0)
         }
         topView.snp.makeConstraints{
             $0.top.equalTo(self.view.safeArea.top)
+            $0.leading.equalTo(self.view)
+            $0.trailing.equalTo(self.view)
+        }
+        menuView.snp.makeConstraints{
+            $0.top.equalTo(topView.snp.bottom).offset(10)
             $0.leading.equalTo(self.view)
             $0.trailing.equalTo(self.view)
         }
@@ -52,6 +70,7 @@ class WaplaceExpertDetailViewController: UIViewController {
 
 extension WaplaceExpertDetailViewController {
     
+    /** 상단의 기업 정보 모델 */
     struct InnerTopModel {
         let title: String
         let imageStr: String
@@ -63,6 +82,8 @@ extension WaplaceExpertDetailViewController {
         let homepage: String
     }
     
+    
+    /** 상단의 기업 정보 View */
     class InnerTopView: UIView {
         var innerModel : InnerTopModel? {
             didSet{
@@ -77,7 +98,6 @@ extension WaplaceExpertDetailViewController {
                 homePageValueLabel.text = model.homepage
             }
         }
-        
         let titleLabel = UILabel().then{
             $0.textColor = UIColor(rgb: 0x4a4a4a)
             $0.font = UIFont.systemFont(ofSize: 17, weight: .bold)
@@ -116,7 +136,7 @@ extension WaplaceExpertDetailViewController {
             $0.font = UIFont.systemFont(ofSize: 15)
         }
         
-        
+    
         override init(frame: CGRect) {
             super.init(frame: frame)
             uiSetting()
@@ -219,6 +239,83 @@ extension WaplaceExpertDetailViewController {
             }
             homePageLabel.snp.makeConstraints{
                 $0.width.equalTo(carrerLabel)
+            }
+        }
+    }
+    
+    /** 프로필, 포트폴리오, 리뷰 선택 버튼 */
+    class MenuButtonsView : UIView{
+        
+        var menuModel: Int?{
+            didSet{
+                guard let model = menuModel else { return }
+                self.buttonBarAnimation(tag: model)
+            }
+        }
+        
+        let profileButton = UIButton().then{
+            $0.setTitle("프로필", for: .normal)
+            $0.setTitleColor(UIColor(rgb: 0x4a4a4a), for: .normal)
+        }
+        let portfolioButton = UIButton().then{
+            $0.setTitle("포트폴리오", for: .normal)
+            $0.setTitleColor(UIColor(rgb: 0x4a4a4a), for: .normal)
+        }
+        let reviewButton = UIButton().then{
+            $0.setTitle("리뷰", for: .normal)
+            $0.setTitleColor(UIColor(rgb: 0x4a4a4a), for: .normal)
+        }
+        let bottomView = UIView(frame: .zero).then{
+            $0.backgroundColor = UIColor(rgb: 0x4a4a4a)
+        }
+        
+        private var bottomViewLeading : Constraint!
+        
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            uiSetting()
+        }
+        
+        required init?(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+        
+        private func buttonBarAnimation(tag: Int){
+            let width = self.frame.width / 3 * CGFloat(tag)
+            UIView.animate(withDuration: 0.5, animations: {
+                 self.bottomViewLeading.update(offset: width)
+            }, completion: nil)
+        }
+        
+        private func uiSetting(){
+            [profileButton, portfolioButton, reviewButton, bottomView].forEach{
+                $0.translatesAutoresizingMaskIntoConstraints = false
+                self.addSubview($0)
+            }
+            profileButton.snp.makeConstraints{
+                $0.height.equalTo(50)
+                $0.top.equalTo(self)
+                $0.leading.equalTo(self)
+                $0.bottom.equalTo(self)
+            }
+            portfolioButton.snp.makeConstraints{
+                $0.top.equalTo(profileButton)
+                $0.leading.equalTo(profileButton.snp.trailing)
+                $0.width.equalTo(profileButton)
+                $0.bottom.equalTo(profileButton)
+            }
+            reviewButton.snp.makeConstraints{
+                $0.top.equalTo(profileButton)
+                $0.leading.equalTo(portfolioButton.snp.trailing)
+                $0.width.equalTo(profileButton)
+                $0.bottom.equalTo(profileButton)
+                $0.trailing.equalTo(self)
+            }
+            bottomView.snp.makeConstraints{
+                $0.height.equalTo(2)
+                bottomViewLeading = $0.leading.equalTo(self.snp.leading).constraint
+                $0.width.equalTo(self.snp.width).multipliedBy(0.333334)
+                $0.bottom.equalTo(self.snp.bottom)
             }
         }
     }
