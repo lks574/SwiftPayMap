@@ -35,6 +35,7 @@ class WaplaceExpertViewController: UIViewController {
     }
     let expertTableView = UITableView(frame: .zero, style: UITableView.Style.plain).then{
         $0.tableFooterView = UIView(frame: .zero)
+        $0.separatorStyle = .none
         $0.estimatedRowHeight = 80
         $0.rowHeight = UITableView.automaticDimension
         $0.register(WaplaceExpertTableViewCell.self, forCellReuseIdentifier: Identifier.expertCell)

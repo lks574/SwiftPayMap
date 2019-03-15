@@ -52,8 +52,8 @@ class WaPlaceSearchViewController: UIViewController {
     let mainTableView = UITableView(frame: .zero, style: UITableView.Style.plain).then{
         $0.tableFooterView = UIView(frame: .zero)
         $0.register(WaplaceTableViewCell.self, forCellReuseIdentifier: Identifier.mainTableCell)
-//        $0.estimatedRowHeight = 80
-//        $0.rowHeight = UITableView.automaticDimension
+        $0.estimatedRowHeight = 80
+        $0.rowHeight = UITableView.automaticDimension
     }
 
 

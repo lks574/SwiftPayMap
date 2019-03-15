@@ -67,6 +67,8 @@
 		93AEE81B222DFC0B00D98DC9 /* KakaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AEE81A222DFC0B00D98DC9 /* KakaoViewController.swift */; };
 		93AEE820222E310A00D98DC9 /* RxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AEE81F222E310A00D98DC9 /* RxSwiftViewController.swift */; };
 		93AEE822222E694A00D98DC9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AEE821222E694A00D98DC9 /* ViewModel.swift */; };
+		93C821BB223B6DDD002285BC /* InnerReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C821BA223B6DDD002285BC /* InnerReviewTableViewCell.swift */; };
+		93C821BE223B8067002285BC /* InnerPortfolioCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C821BD223B8067002285BC /* InnerPortfolioCollectionCell.swift */; };
 		F7BFCA8001D9A22F1F8D0437 /* Pods_SwiftPayMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7AA2E900C4A200F043EFDF0 /* Pods_SwiftPayMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -147,6 +149,8 @@
 		93AEE81A222DFC0B00D98DC9 /* KakaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoViewController.swift; sourceTree = "<group>"; };
 		93AEE81F222E310A00D98DC9 /* RxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftViewController.swift; sourceTree = "<group>"; };
 		93AEE821222E694A00D98DC9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		93C821BA223B6DDD002285BC /* InnerReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerReviewTableViewCell.swift; sourceTree = "<group>"; };
+		93C821BD223B8067002285BC /* InnerPortfolioCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerPortfolioCollectionCell.swift; sourceTree = "<group>"; };
 		A22119C7DC3D011C7DDC51E6 /* Pods-SwiftPayMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPayMap.release.xcconfig"; path = "Target Support Files/Pods-SwiftPayMap/Pods-SwiftPayMap.release.xcconfig"; sourceTree = "<group>"; };
 		C7AA2E900C4A200F043EFDF0 /* Pods_SwiftPayMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftPayMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E022A065FA5D5832C4FA45 /* Pods-SwiftPayMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPayMap.debug.xcconfig"; path = "Target Support Files/Pods-SwiftPayMap/Pods-SwiftPayMap.debug.xcconfig"; sourceTree = "<group>"; };
@@ -248,6 +252,7 @@
 			children = (
 				9357BF14223A30CE004148F1 /* WaplaceExpertViewController.swift */,
 				9305F054223A77C200FFDF57 /* WaplaceExpertDetailViewController.swift */,
+				93C821B9223B6DA1002285BC /* cell */,
 			);
 			path = expert;
 			sourceTree = "<group>";
@@ -449,6 +454,15 @@
 				93AEE821222E694A00D98DC9 /* ViewModel.swift */,
 			);
 			path = rx_swift;
+			sourceTree = "<group>";
+		};
+		93C821B9223B6DA1002285BC /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				93C821BA223B6DDD002285BC /* InnerReviewTableViewCell.swift */,
+				93C821BD223B8067002285BC /* InnerPortfolioCollectionCell.swift */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		A3EB3F74A02BADA958DCC941 /* Frameworks */ = {
@@ -685,6 +699,7 @@
 				935F12DE222D37B300D3D4B1 /* Bridge.m in Sources */,
 				9352FE48222F93BD001AD9F8 /* AppleMapViewController.swift in Sources */,
 				9352FE41222F7EFE001AD9F8 /* AppService.swift in Sources */,
+				93C821BE223B8067002285BC /* InnerPortfolioCollectionCell.swift in Sources */,
 				938ACD6122310AC300EAAFDF /* BubbleModel.swift in Sources */,
 				938F41C922389CF400D87D4C /* CustomPhotoAlbum.swift in Sources */,
 				9357BF15223A30CE004148F1 /* WaplaceExpertViewController.swift in Sources */,
@@ -695,6 +710,7 @@
 				938ACD562230ACEE00EAAFDF /* DanbeeMoya.swift in Sources */,
 				9357BF042239D9C8004148F1 /* PHAsset+Extension.swift in Sources */,
 				9352FE39222F7AA6001AD9F8 /* PhotoListViewReactor.swift in Sources */,
+				93C821BB223B6DDD002285BC /* InnerReviewTableViewCell.swift in Sources */,
 				93AA1D592238812B00598E20 /* PhotoModel.swift in Sources */,
 				938F41D42238F4DD00D87D4C /* AlbumDetailViewController.swift in Sources */,
 				9395E4AE22361BE300E0E6FC /* ChatRxViewController.swift in Sources */,
