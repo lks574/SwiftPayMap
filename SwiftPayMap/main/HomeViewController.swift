@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
         $0.tableFooterView = UIView(frame: .zero)
     }
     
-    private let tableArray = ["iap","pg","daum map", "카카오 로그인", "RX", "ReactorKit", "flickrSearch", "apple map", "Chat", "RxChat", "Album", "와플"]
+    private let tableArray = ["iap","pg","daum map", "카카오 로그인", "RX", "ReactorKit", "flickrSearch", "apple map", "Chat", "RxChat", "Album", "와플", "Toook", "icloud"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,6 +104,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             self.navigationController?.pushViewController(vc, animated: true)
         case 11:
             let vc = WaPlaceViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        case 12:
+            let vc = ToookViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        case 13:
+            let vc = IcloudViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         default:
             break
